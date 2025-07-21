@@ -65,23 +65,20 @@ export const Header = () => {
                 initial="initial"
                 animate="animate"
               >
-                {[
-                  "Tentang Kami",
-                  "Cara Kerja",            
-                  "Testimoni",
-                  "FAQ",
-                ].map((item, index) => (
-                  <motion.a
-                    key={item}
-                    href={`#${item.toLowerCase().replace(" ", "-")}`}
-                    className="px-3 py-2 text-sm font-medium transition-colors duration-200 text-secondary-text"
-                    variants={fadeInUp}
-                    whileHover={whileHover}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {item}
-                  </motion.a>
-                ))}
+                {["Tentang Kami", "Cara Kerja", "Testimoni", "FAQ"].map(
+                  (item) => (
+                    <motion.a
+                      key={item}
+                      href={`#${item.toLowerCase().replace(" ", "-")}`}
+                      className="px-3 py-2 text-sm font-medium transition-colors duration-200 text-secondary-text"
+                      variants={fadeInUp}
+                      whileHover={whileHover}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      {item}
+                    </motion.a>
+                  )
+                )}
               </motion.div>
             </div>
           </div>
@@ -154,6 +151,41 @@ export const Header = () => {
           </div>
         </div>
       </div>
+
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden overflow-hidden border-t border-primary-border"
+          >
+            <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+              {["Tentang Kami", "Cara Kerja", "Testimoni", "FAQ"].map(
+                (item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase().replace(" ", "-")}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block rounded-md px-3 py-2 text-base font-medium text-secondary-text hover:bg-secondary-background"
+                  >
+                    {item}
+                  </a>
+                )
+              )}
+              <div className="pt-4 px-1">
+                <Button
+                  className="w-full bg-accent-background text-inverse-text"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Mulai Sekarang
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };

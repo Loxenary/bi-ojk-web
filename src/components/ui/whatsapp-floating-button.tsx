@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Button } from "./button";
-import { MessageCircle } from "lucide-react";
 import Image from "next/image";
 
 export const WhatsAppFloatingButton = () => {
@@ -23,7 +22,7 @@ export const WhatsAppFloatingButton = () => {
           ease: "easeInOut",
         }}
       >
-        <Button className=" rounded-full md:w-20 md:h-20 w-16 h-16 p-2 shadow-lg transition-all duration-300 bg-transparent text-inverse-text">
+        <Button className=" rounded-full md:w-20 md:h-20 w-16 h-16 p-3 shadow-lg transition-all duration-300 bg-transparent text-inverse-text">
           {/* <MessageCircle className="w-7 h-7" /> */}
           <Image
             src={IMAGES.WHATSAPP_ICON}

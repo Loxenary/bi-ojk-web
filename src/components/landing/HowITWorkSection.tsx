@@ -1,7 +1,5 @@
-import { staggerContainer } from "@/constant/style.constant";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "../ui/card";
-import { ChevronRight, Play, Search, Send, TrendingUp } from "lucide-react";
+import { ChevronRight, Play} from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";

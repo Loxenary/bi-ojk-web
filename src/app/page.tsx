@@ -8,7 +8,6 @@ import { CarouselSection } from "@/components/landing/CarouselSection";
 import { FeatureSection } from "@/components/landing/feature/FeatureSection";
 import { CTASection } from "@/components/landing/CTASection";
 import { Footer } from "@/components/layout/Footer";
-import HowItWorksPage from "./how-it-works/page";
 import { HowItWorksSection } from "@/components/landing/HowITWorkSection";
 import { FAQSection } from "@/components/landing/FAQSection";
 

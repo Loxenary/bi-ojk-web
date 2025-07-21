@@ -118,7 +118,7 @@ export const HeroSection = () => {
                 { value: "25K+", label: "Pengguna Terlindungi" },
                 { value: "99.9%", label: "Akurasi AI" },
                 { value: "24/7", label: "Perlindungan" },
-              ].map((stat, index) => (
+              ].map((stat) => (
                 <motion.div
                   key={stat.label}
                   className="text-center relative group text-primary-text"

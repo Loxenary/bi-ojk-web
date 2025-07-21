@@ -2,8 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { fadeInUp } from "@/constant/style.constant";
 import { FeatureItemInterface } from "@/constant/type";
 import { motion } from "framer-motion";
-import type { LucideProps } from "lucide-react";
-import type { ForwardRefExoticComponent, RefAttributes } from "react";
 
 interface FeatureCardProps extends FeatureItemInterface {
   index: number;

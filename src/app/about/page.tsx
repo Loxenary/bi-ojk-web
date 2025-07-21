@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -220,7 +220,7 @@ export default function AboutPage() {
               { value: "500K+", label: "Penipuan Terblokir" },
               { value: "99.9%", label: "Akurasi AI" },
               { value: "24/7", label: "Monitoring" },
-            ].map((stat, index) => (
+            ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-3xl font-bold mb-2 bg-accent-background">
                   {stat.value}
@@ -335,7 +335,7 @@ export default function AboutPage() {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            {values.map((value, index) => {
+            {values.map((value) => {
               const IconComponent = value.icon;
               return (
                 <motion.div key={value.title} variants={fadeInUp}>
@@ -384,7 +384,7 @@ export default function AboutPage() {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            {teamMembers.map((member, index) => (
+            {teamMembers.map((member) => (
               <motion.div key={member.name} variants={fadeInUp}>
                 <Card className="p-6 hover:shadow-lg transition-all duration-300 bg-primary-background border-primary-border">
                   <CardHeader className="p-0 mb-4">
