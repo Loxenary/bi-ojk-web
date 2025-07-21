@@ -17,7 +17,7 @@ export const CarouselSection = ({ carouselItems }: CarouselSectionProps) => {
       setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
     }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [carouselItems.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % carouselItems.length);

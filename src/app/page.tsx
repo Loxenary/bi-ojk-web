@@ -10,6 +10,7 @@ import { CTASection } from "@/components/landing/CTASection";
 import { Footer } from "@/components/layout/Footer";
 import { HowItWorksSection } from "@/components/landing/HowITWorkSection";
 import { FAQSection } from "@/components/landing/FAQSection";
+import { TestimonialSection } from "@/components/landing/TestimonialSection";
 
 export default function AmanAjaWebsite() {
   const carouselItems = [
@@ -75,6 +76,8 @@ export default function AmanAjaWebsite() {
       <FeatureSection featureList={featureList} />
 
       <HowItWorksSection />
+
+      <TestimonialSection />
 
       <FAQSection />
 
