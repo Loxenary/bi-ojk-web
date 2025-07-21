@@ -11,7 +11,7 @@ import {
 import Image from "next/image";
 
 const IMAGES = {
-  hero_image: "images/contoh_penipuan.jpg",
+  hero_image: "/images/contoh_penipuan.jpg",
 };
 
 export const HeroSection = () => {
@@ -152,7 +152,7 @@ export const HeroSection = () => {
                 className="object-contain  rounded-2xl"
               />
               {/* Floating Elements */}
-              <motion.div
+              {/* <motion.div
                 className="absolute -top-4 -right-4 rounded-2xl p-4 shadow-lg bg-accent-background text-inverse-text"
                 animate={{
                   y: [-5, 5, -5],
@@ -182,7 +182,7 @@ export const HeroSection = () => {
                 whileHover={{ scale: 1.1 }}
               >
                 <Brain className="w-8 h-8" />
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           </motion.div>
         </div>

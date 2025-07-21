@@ -37,7 +37,7 @@ export const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 w-full z-40 transition-all duration-300 backdrop-blur-md border-b bg-primary-background opacity-95 border-primary-border"
+      className="fixed top-0 z-40 transition-all duration-300 backdrop-blur-md border-b bg-primary-background opacity-95 border-primary-border w-screen overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">

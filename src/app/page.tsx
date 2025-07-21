@@ -83,7 +83,7 @@ export default function AmanAjaWebsite() {
 
       <CTASection />
 
-      <Footer aboutItems={aboutItems} />
+      <Footer aboutItems={aboutItems} /> 
     </div>
   );
 }
