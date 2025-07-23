@@ -27,7 +27,7 @@ export const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text Content */}
           <motion.div
-            className="space-y-8"
+            className="flex flex-col h-full justify-center gap-5"
             initial="initial"
             animate={heroInView ? "animate" : "initial"}
             variants={staggerContainer}
@@ -108,7 +108,7 @@ export const HeroSection = () => {
             </motion.div>
 
             {/* Stats */}
-            <motion.div
+            {/* <motion.div
               className="grid grid-cols-3 gap-6 pt-8"
               variants={staggerContainer}
               initial="initial"
@@ -130,7 +130,7 @@ export const HeroSection = () => {
                   <div className="text-sm text-muted-text">{stat.label}</div>
                 </motion.div>
               ))}
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Right Side - Image */}

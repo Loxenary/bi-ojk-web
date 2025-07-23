@@ -67,9 +67,9 @@ export default function AmanAjaWebsite() {
 
   return (
     <div className="bg-primary-background text-primary-text min-h-screen transition-colors duration-300 max-w-screen overflow-x-hidden">
-      <WhatsAppFloatingButton />
+    <WhatsAppFloatingButton />
       <Header />
-      <CarouselSection carouselItems={carouselItems} />
+      {/* <CarouselSection carouselItems={carouselItems} /> */}
 
       <HeroSection />
 
@@ -77,8 +77,8 @@ export default function AmanAjaWebsite() {
 
       <HowItWorksSection />
 
-      <TestimonialSection />
-
+      {/* <TestimonialSection /> */}
+    
       <FAQSection />
 
       <CTASection />

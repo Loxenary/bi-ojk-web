@@ -1,4 +1,6 @@
 "use client";
+
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -185,9 +187,18 @@ export default function HowItWorksPage() {
   ];
 
   return (
-    <div className="min-h-screen transition-colors duration-300 bg-primary-background text-primary-text">
+    <div
+      className="min-h-screen transition-colors duration-300 bg-primary-background text-primary-text"
+      // style={{
+      //   backgroundColor: theme.bg.primary,
+      //   color: theme.text.primary,
+      // }}
+    >
       {/* Header */}
-      <header className="py-8 px-4 sm:px-6 lg:px-8 border-b border-border">
+      <header
+        className="py-8 px-4 sm:px-6 lg:px-8 border-b border-border"
+        // style={{ borderColor: theme.border }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <motion.div
@@ -201,13 +212,20 @@ export default function HowItWorksPage() {
                   variant="ghost"
                   size="sm"
                   className="flex items-center space-x-2 text-secondary-text"
+                  // style={{ color: theme.text.secondary }}
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>Kembali</span>
                 </Button>
               </Link>
-              <div className="h-6 w-px bg-border" />
-              <h1 className="text-2xl font-bold text-primary-text">
+              <div
+                className="h-6 w-px bg-border"
+                // style={{ backgroundColor: theme.border }}
+              />
+              <h1
+                className="text-2xl font-bold text-primary-text"
+                // style={{ color: theme.text.primary }}
+              >
                 Cara Kerja AmanAja
               </h1>
             </motion.div>
@@ -217,7 +235,14 @@ export default function HowItWorksPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Badge className="px-3 py-1 bg-accent-background text-accent-background border border-accent-background">
+              <Badge
+                className="px-3 py-1 bg-accent-background/20 border border-accent-background/30 text-accent-background"
+                // style={{
+                //   backgroundColor: theme.bg.accent + "20",
+                //   color: theme.bg.accent,
+                //   border: `1px solid ${theme.bg.accent}30`,
+                // }}
+              >
                 3 Langkah Mudah
               </Badge>
             </motion.div>
@@ -226,17 +251,28 @@ export default function HowItWorksPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-background">
+      <section
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-background"
+        // style={{ backgroundColor: theme.bg.secondary }}
+      >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             className="text-4xl sm:text-5xl font-bold mb-6 text-primary-text"
+            // style={{ color: theme.text.primary }}
             variants={fadeInUp}
           >
             Teknologi AI yang
-            <span className="text-accent-background"> Mudah Digunakan</span>
+            <span
+              className="text-accent-background"
+              // style={{ color: theme.bg.accent }}
+            >
+              {" "}
+              Mudah Digunakan
+            </span>
           </motion.h2>
           <motion.p
             className="text-xl leading-relaxed text-secondary-text"
+            // style={{ color: theme.text.secondary }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -249,7 +285,10 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Detailed Steps */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background">
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background"
+        // style={{ backgroundColor: theme.bg.primary }}
+      >
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -257,10 +296,16 @@ export default function HowItWorksPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold mb-4 text-primary-text">
+            <h3
+              className="text-3xl font-bold mb-4 text-primary-text"
+              // style={{ color: theme.text.primary }}
+            >
               Proses Detail Analisis AI
             </h3>
-            <p className="text-lg text-secondary-text">
+            <p
+              className="text-lg text-secondary-text"
+              // style={{ color: theme.text.secondary }}
+            >
               Setiap langkah dirancang untuk memberikan hasil yang akurat dan
               dapat diandalkan
             </p>
@@ -280,28 +325,52 @@ export default function HowItWorksPage() {
                 >
                   <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                     <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 bg-accent-background">
-                        <IconComponent className="w-8 h-8 text-inverse-text" />
+                      <div
+                        className="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 bg-accent-background"
+                        // style={{ backgroundColor: theme.bg.accent }}
+                      >
+                        <IconComponent
+                          className="w-8 h-8 text-inverse-text"
+                          // style={{ color: theme.text.inverse }}
+                        />
                       </div>
                       <div>
-                        <Badge className="mb-2 bg-orange-background text-orange-background">
+                        <Badge
+                          className="mb-2 bg-orange-background/20 text-orange-background"
+                          // style={{
+                          //   backgroundColor: theme.bg.orange + "20",
+                          //   color: theme.bg.orange,
+                          // }}
+                        >
                           Langkah {step.step}
                         </Badge>
-                        <h4 className="text-2xl font-bold text-primary-text">
+                        <h4
+                          className="text-2xl font-bold text-primary-text"
+                          // style={{ color: theme.text.primary }}
+                        >
                           {step.title}
                         </h4>
-                        <p className="text-sm text-accent-background">
+                        <p
+                          className="text-sm text-accent-background"
+                          // style={{ color: theme.bg.accent }}
+                        >
                           {step.subtitle}
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-lg leading-relaxed mb-6 text-secondary-text">
+                    <p
+                      className="text-lg leading-relaxed mb-6 text-secondary-text"
+                      // style={{ color: theme.text.secondary }}
+                    >
                       {step.description}
                     </p>
 
                     <Tabs defaultValue="technical" className="w-full">
-                      <TabsList className="grid w-full grid-cols-2 mb-4 bg-secondary-background">
+                      <TabsList
+                        className="grid w-full grid-cols-2 mb-4 bg-secondary-background"
+                        // style={{ backgroundColor: theme.bg.secondary }}
+                      >
                         <TabsTrigger value="technical">
                           Detail Teknis
                         </TabsTrigger>
@@ -311,8 +380,14 @@ export default function HowItWorksPage() {
                       <TabsContent value="technical" className="space-y-3">
                         {step.technicalDetails.map((detail, idx) => (
                           <div key={idx} className="flex items-start space-x-3">
-                            <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0 text-accent-background" />
-                            <span className="text-sm text-secondary-text">
+                            <CheckCircle
+                              className="w-4 h-4 mt-0.5 flex-shrink-0 text-accent-background"
+                              // style={{ color: theme.bg.accent }}
+                            />
+                            <span
+                              className="text-sm text-secondary-text"
+                              // style={{ color: theme.text.secondary }}
+                            >
                               {detail}
                             </span>
                           </div>
@@ -322,10 +397,19 @@ export default function HowItWorksPage() {
                       <TabsContent value="process" className="space-y-3">
                         {step.process.map((process, idx) => (
                           <div key={idx} className="flex items-start space-x-3">
-                            <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5 bg-accent-background text-accent-background">
+                            <div
+                              className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5 bg-accent-background/20 text-accent-background"
+                              // style={{
+                              //   backgroundColor: theme.bg.accent + "20",
+                              //   color: theme.bg.accent,
+                              // }}
+                            >
                               {idx + 1}
                             </div>
-                            <span className="text-sm text-secondary-text">
+                            <span
+                              className="text-sm text-secondary-text"
+                              // style={{ color: theme.text.secondary }}
+                            >
                               {process}
                             </span>
                           </div>
@@ -335,23 +419,50 @@ export default function HowItWorksPage() {
                   </div>
 
                   <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                    <Card className="p-8 bg-primary-background border border-border">
+                    <Card
+                      className="p-8 bg-secondary-background border border-border"
+                      // style={{
+                      //   backgroundColor: theme.bg.secondary,
+                      //   borderColor: theme.border,
+                      // }}
+                    >
                       <div className="text-center">
-                        <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-6 bg-primary-background">
-                          <IconComponent className="w-12 h-12 text-accent-background" />
+                        <div
+                          className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-6 bg-primary-background"
+                          // style={{ backgroundColor: theme.bg.primary }}
+                        >
+                          <IconComponent
+                            className="w-12 h-12 text-accent-background"
+                            // style={{ color: theme.bg.accent }}
+                          />
                         </div>
-                        <h5 className="text-lg font-semibold mb-3 text-primary-text">
+                        <h5
+                          className="text-lg font-semibold mb-3 text-primary-text"
+                          // style={{ color: theme.text.primary }}
+                        >
                           {step.title} Demo
                         </h5>
                         <div className="space-y-3 text-left">
-                          <div className="p-3 rounded-lg text-sm bg-primary-background">
+                          <div
+                            className="p-3 rounded-lg text-sm bg-primary-background"
+                            // style={{ backgroundColor: theme.bg.primary }}
+                          >
                             <div className="flex items-center mb-2">
-                              <Clock className="w-4 h-4 mr-2 text-accent-background" />
-                              <span className="font-medium text-primary-text">
+                              <Clock
+                                className="w-4 h-4 mr-2 bg-accent-background"
+                                // style={{ color: theme.bg.accent }}
+                              />
+                              <span
+                                className="font-medium text-primary-text"
+                                // style={{ color: theme.text.primary }}
+                              >
                                 Processing Time
                               </span>
                             </div>
-                            <span className="text-secondary-text">
+                            <span
+                              className="text-secondary-text"
+                              // style={{ color: theme.text.secondary }}
+                            >
                               {index === 0
                                 ? "< 1 detik"
                                 : index === 1
@@ -359,14 +470,26 @@ export default function HowItWorksPage() {
                                 : "< 1 detik"}
                             </span>
                           </div>
-                          <div className="p-3 rounded-lg text-sm bg-primary-background">
+                          <div
+                            className="p-3 rounded-lg text-sm bg-primary-background"
+                            // style={{ backgroundColor: theme.bg.primary }}
+                          >
                             <div className="flex items-center mb-2">
-                              <BarChart3 className="w-4 h-4 mr-2 bg-orange-background" />
-                              <span className="font-medium text-primary-text">
+                              <BarChart3
+                                className="w-4 h-4 mr-2 bg-orange-background"
+                                // style={{ color: theme.bg.orange }}
+                              />
+                              <span
+                                className="font-medium text-primary-text"
+                                // style={{ color: theme.text.primary }}
+                              >
                                 Akurasi
                               </span>
                             </div>
-                            <span className="text-secondary-text">
+                            <span
+                              className="text-secondary-text"
+                              // style={{ color: theme.text.secondary }}
+                            >
                               {index === 0
                                 ? "100%"
                                 : index === 1
@@ -386,7 +509,10 @@ export default function HowItWorksPage() {
       </section>
 
       {/* AI Technology */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary-background">
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary-background"
+        // style={{ backgroundColor: theme.bg.secondary }}
+      >
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -394,10 +520,16 @@ export default function HowItWorksPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold mb-4 text-primary-text">
+            <h3
+              className="text-3xl font-bold mb-4 text-primary-text"
+              // style={{ color: theme.text.primary }}
+            >
               Teknologi AI di Balik AmanAja
             </h3>
-            <p className="text-lg text-secondary-text">
+            <p
+              className="text-lg text-secondary-text"
+              //  style={{ color: theme.text.secondary }}
+            >
               Kombinasi teknologi machine learning terdepan untuk hasil yang
               optimal
             </p>
@@ -414,17 +546,35 @@ export default function HowItWorksPage() {
               const IconComponent = tech.icon;
               return (
                 <motion.div key={tech.title} variants={fadeInUp}>
-                  <Card className="p-6 h-full hover:shadow-lg transition-all duration-300 bg-secondary-background border-border">
+                  <Card
+                    className="p-6 h-full hover:shadow-lg transition-all duration-300 bg-primary-background border border-border"
+                    // style={{
+                    //   backgroundColor: theme.bg.primary,
+                    //   borderColor: theme.border,
+                    // }}
+                  >
                     <CardHeader className="p-0 mb-4">
                       <div className="flex items-center mb-3">
-                        <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-3 bg-secondary-background">
-                          <IconComponent className="w-6 h-6 text-accent-background" />
+                        <div
+                          className="w-12 h-12 rounded-xl flex items-center justify-center mr-3 bg-secondary-background"
+                          // style={{ backgroundColor: theme.bg.secondary }}
+                        >
+                          <IconComponent
+                            className="w-6 h-6 text-accent-background"
+                            // style={{ color: theme.bg.accent }}
+                          />
                         </div>
-                        <CardTitle className="text-lg text-primary-text">
+                        <CardTitle
+                          className="text-lg text-primary-text"
+                          // style={{ color: theme.text.primary }}
+                        >
                           {tech.title}
                         </CardTitle>
                       </div>
-                      <p className="text-sm leading-relaxed text-secondary-text">
+                      <p
+                        className="text-sm leading-relaxed text-secondary-text"
+                        // style={{ color: theme.text.secondary }}
+                      >
                         {tech.description}
                       </p>
                     </CardHeader>
@@ -433,8 +583,14 @@ export default function HowItWorksPage() {
                       <div className="space-y-2">
                         {tech.capabilities.map((capability, idx) => (
                           <div key={idx} className="flex items-start space-x-2">
-                            <div className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-orange-background" />
-                            <span className="text-xs text-secondary-text">
+                            <div
+                              className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-orange-background"
+                              // style={{ backgroundColor: theme.bg.orange }}
+                            />
+                            <span
+                              className="text-xs text-secondary-text"
+                              // style={{ color: theme.text.secondary }}
+                            >
                               {capability}
                             </span>
                           </div>
@@ -450,7 +606,10 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Security Measures */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background">
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background"
+        // style={{ backgroundColor: theme.bg.primary }}
+      >
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -458,10 +617,16 @@ export default function HowItWorksPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold mb-4 text-primary-text">
+            <h3
+              className="text-3xl font-bold mb-4 text-primary-text"
+              // style={{ color: theme.text.primary }}
+            >
               Keamanan & Privasi Terjamin
             </h3>
-            <p className="text-lg text-secondary-text">
+            <p
+              className="text-lg text-secondary-text"
+              //  style={{ color: theme.text.secondary }}
+            >
               Standar keamanan enterprise untuk melindungi data dan privasi Anda
             </p>
           </motion.div>
@@ -477,15 +642,33 @@ export default function HowItWorksPage() {
               const IconComponent = measure.icon;
               return (
                 <motion.div key={measure.title} variants={fadeInUp}>
-                  <Card className="p-6 text-center h-full hover:shadow-lg transition-all duration-300 bg-primary-background border border-border">
+                  <Card
+                    className="p-6 text-center h-full hover:shadow-lg transition-all duration-300 bg-primary-background border border-border"
+                    // style={{
+                    //   backgroundColor: theme.bg.primary,
+                    //   borderColor: theme.border,
+                    // }}
+                  >
                     <CardContent className="p-0">
-                      <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-secondary-background">
-                        <IconComponent className="w-8 h-8 border border-accent-background" />
+                      <div
+                        className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-secondary-background"
+                        // style={{ backgroundColor: theme.bg.secondary }}
+                      >
+                        <IconComponent
+                          className="w-8 h-8 text-accent-background"
+                          // style={{ color: theme.bg.accent }}
+                        />
                       </div>
-                      <h4 className="text-lg font-semibold mb-3 text-primary-text">
+                      <h4
+                        className="text-lg font-semibold mb-3 text-primary-text"
+                        // style={{ color: theme.text.primary }}
+                      >
                         {measure.title}
                       </h4>
-                      <p className="text-sm leading-relaxed text-secondary-text">
+                      <p
+                        className="text-sm leading-relaxed text-secondary-text"
+                        // style={{ color: theme.text.secondary }}
+                      >
                         {measure.description}
                       </p>
                     </CardContent>
@@ -498,10 +681,14 @@ export default function HowItWorksPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-background">
+      <section
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-background"
+        // style={{ backgroundColor: theme.bg.secondary }}
+      >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h3
             className="text-3xl font-bold mb-6 text-primary-text"
+            // style={{ color: theme.text.primary }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -510,6 +697,7 @@ export default function HowItWorksPage() {
           </motion.h3>
           <motion.p
             className="text-lg mb-8 text-secondary-text"
+            // style={{ color: theme.text.secondary }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -528,6 +716,10 @@ export default function HowItWorksPage() {
             <Button
               size="lg"
               className="px-8 py-3 bg-accent-background text-inverse-text"
+              // style={{
+              //   backgroundColor: theme.bg.accent,
+              //   color: theme.text.inverse,
+              // }}
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Coba Sekarang
@@ -536,7 +728,11 @@ export default function HowItWorksPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-3 bg-transparent border border-border text-secondary-text"
+                className="px-8 py-3 bg-transparent border-border border text-secondary-text"
+                // style={{
+                //   borderColor: theme.border,
+                //   color: theme.text.secondary,
+                // }}
               >
                 Kembali ke Beranda
               </Button>

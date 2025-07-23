@@ -44,7 +44,7 @@ export const Footer = ({ aboutItems }: FooterProps) => {
               lebih aman.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="transition-all duration-200 bg-accent-background text-primary-text">
+              <Button className="transition-all duration-200 bg-accent-background text-inverse-text">
                 <MessageCircle className="w-4 h-4 mr-2" />
                 Mulai Chat
               </Button>

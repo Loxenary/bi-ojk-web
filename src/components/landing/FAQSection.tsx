@@ -76,28 +76,6 @@ export const FAQSection = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link href="/faq">
-              <Button
-                size="lg"
-                variant="outline"
-                className="px-8 py-4 text-lg transition-all duration-200 bg-transparent border border-accent-background text-accent-background"
-                
-              >
-                Lihat Semua FAQ
-                <ChevronRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );

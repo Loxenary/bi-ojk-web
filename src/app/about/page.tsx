@@ -1,6 +1,6 @@
 "use client";
 
-
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -17,6 +17,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { fadeInUp, staggerContainer } from "@/constant/style.constant";
+import { WhatsAppFloatingButton } from "@/components/ui/whatsapp-floating-button";
 
 export default function AboutPage() {
   const teamMembers = [
@@ -147,9 +148,19 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen transition-colors duration-300 bg-primary-background text-primary-text">
+    <div
+      className="min-h-screen transition-colors bg-primary-background text-primary-text duration-300"
+      // style={{
+      //   backgroundColor: theme.bg.primary,
+      //   color: theme.text.primary,
+      // }}
+    >
+      <WhatsAppFloatingButton />
       {/* Header */}
-      <header className="py-8 px-4 sm:px-6 lg:px-8 border-b border-primary-border">
+      <header
+        className="py-8 px-4 sm:px-6 lg:px-8 border-b border-border"
+        // style={{ borderColor: theme.border }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <motion.div
@@ -163,13 +174,20 @@ export default function AboutPage() {
                   variant="ghost"
                   size="sm"
                   className="flex items-center space-x-2 text-secondary-text"
+                  // style={{ color: theme.text.secondary }}
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>Kembali</span>
                 </Button>
               </Link>
-              <div className="h-6 w-px border-primary-border" />
-              <h1 className="text-2xl font-bold text-primary-text">
+              <div
+                className="h-6 w-px bg-border"
+                // style={{ backgroundColor: theme.border }}
+              />
+              <h1
+                className="text-2xl font-bold text-primary-text"
+                //  style={{ color: theme.text.primary }}
+              >
                 Tentang AmanAja
               </h1>
             </motion.div>
@@ -179,7 +197,14 @@ export default function AboutPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Badge className="px-3 py-1 bg-accent-background text-accent-background border border-accent-background">
+              <Badge
+                className="px-3 py-1 bg-accent-background bg-opacity-20 text-accent-background border border-accent-background"
+                // style={{
+                //   backgroundColor: theme.bg.accent + "20",
+                //   color: theme.bg.accent,
+                //   border: `1px solid ${theme.bg.accent}30`,
+                // }}
+              >
                 Est. 2022
               </Badge>
             </motion.div>
@@ -188,17 +213,28 @@ export default function AboutPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-background">
+      <section
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-background"
+        //  style={{ backgroundColor: theme.bg.secondary }}
+      >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             className="text-4xl sm:text-5xl font-bold mb-6 text-primary-text"
+            // style={{ color: theme.text.primary }}
             variants={fadeInUp}
           >
             Melindungi Indonesia dari
-            <span className="bg-accent-background"> Penipuan Digital</span>
+            <span
+              className="text-accent-background"
+              // style={{ color: theme.bg.accent }}
+            >
+              {" "}
+              Penipuan Digital
+            </span>
           </motion.h2>
           <motion.p
             className="text-xl leading-relaxed mb-8 text-secondary-text"
+            // style={{ color: theme.text.secondary }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -220,12 +256,20 @@ export default function AboutPage() {
               { value: "500K+", label: "Penipuan Terblokir" },
               { value: "99.9%", label: "Akurasi AI" },
               { value: "24/7", label: "Monitoring" },
-            ].map((stat) => (
+            ].map((stat, index) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl font-bold mb-2 bg-accent-background">
+                <div
+                  className="text-3xl font-bold mb-2 text-secondary-background"
+                  // style={{ color: theme.bg.accent }}
+                >
                   {stat.value}
                 </div>
-                <div className="text-sm text-muted-text">{stat.label}</div>
+                <div
+                  className="text-sm text-muted-text"
+                  // style={{ color: theme.text.muted }}
+                >
+                  {stat.label}
+                </div>
               </div>
             ))}
           </motion.div>
@@ -233,7 +277,10 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background">
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background"
+        // style={{ backgroundColor: theme.bg.primary }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             <motion.div
@@ -243,12 +290,21 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-6">
-                <Target className="w-8 h-8 mr-3 bg-accent-background" />
-                <h3 className="text-2xl font-bold text-primary-text">
+                <Target
+                  className="w-8 h-8 mr-3 text-accent-background"
+                  // style={{ color: theme.bg.accent }}
+                />
+                <h3
+                  className="text-2xl font-bold text-primary-text"
+                  //  style={{ color: theme.text.primary }}
+                >
                   Misi Kami
                 </h3>
               </div>
-              <p className="text-lg leading-relaxed mb-6 text-secondary-text">
+              <p
+                className="text-lg leading-relaxed mb-6 text-secondary-text"
+                // style={{ color: theme.text.secondary }}
+              >
                 Menciptakan ekosistem digital yang aman untuk seluruh masyarakat
                 Indonesia melalui teknologi AI yang dapat diakses oleh semua
                 kalangan, dari yang paling tech-savvy hingga yang awam
@@ -262,8 +318,16 @@ export default function AboutPage() {
                   "Kolaborasi dengan penegak hukum dan regulator",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 mt-0.5 bg-accent-background" />
-                    <span className="text-secondary-text">{item}</span>
+                    <CheckCircle
+                      className="w-5 h-5 mt-0.5 text-accent-background"
+                      // style={{ color: theme.bg.accent }}
+                    />
+                    <span
+                      className="text-secondary-text"
+                      //  style={{ color: theme.text.secondary }}
+                    >
+                      {item}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -276,31 +340,58 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-6">
-                <Globe className="w-8 h-8 mr-3 bg-orange-background" />
-                <h3 className="text-2xl font-bold text-primary-text">
+                <Globe
+                  className="w-8 h-8 mr-3 text-orange-background"
+                  // style={{ color: theme.bg.orange }}
+                />
+                <h3
+                  className="text-2xl font-bold text-primary-text"
+                  //  style={{ color: theme.text.primary }}
+                >
                   Visi Kami
                 </h3>
               </div>
-              <p className="text-lg leading-relaxed mb-6 text-secondary-text">
+              <p
+                className="text-lg leading-relaxed mb-6 text-secondary-text"
+                // style={{ color: theme.text.secondary }}
+              >
                 Menjadi platform AI fraud detection terdepan di Asia Tenggara
                 yang dipercaya oleh jutaan pengguna untuk melindungi mereka dari
                 berbagai bentuk penipuan digital.
               </p>
               <div className="space-y-4">
-                <div className="p-4 rounded-lg bg-secondary-background">
-                  <h4 className="font-semibold mb-2 text-primary-text">
+                <div
+                  className="p-4 rounded-lg bg-secondary-background"
+                  //  style={{ backgroundColor: theme.bg.secondary }}
+                >
+                  <h4
+                    className="font-semibold mb-2 text-primary-text"
+                    // style={{ color: theme.text.primary }}
+                  >
                     2025 Target
                   </h4>
-                  <p className="text-sm text-secondary-text">
+                  <p
+                    className="text-sm text-secondary-text"
+                    // style={{ color: theme.text.secondary }}
+                  >
                     100K+ pengguna aktif di Indonesia dengan ekspansi ke
                     Malaysia dan Singapura
                   </p>
                 </div>
-                <div className="p-4 rounded-lg bg-secondary-background">
-                  <h4 className="font-semibold mb-2 text-primary-text">
+                <div
+                  className="p-4 rounded-lg bg-secondary-background"
+                  // style={{ backgroundColor: theme.bg.secondary }}
+                >
+                  <h4
+                    className="font-semibold mb-2 text-primary-text"
+                    // style={{ color: theme.text.primary }}
+                  >
                     2027 Vision
                   </h4>
-                  <p className="text-sm text-secondary-text">
+                  <p
+                    className="text-sm text-secondary-text"
+                    // style={{ color: theme.text.secondary }}
+                  >
                     Platform fraud detection #1 di Asia Tenggara dengan 1M+
                     pengguna terlindungi
                   </p>
@@ -312,7 +403,10 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary-background">
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary-background"
+        // style={{ backgroundColor: theme.bg.secondary }}
+      >
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -320,10 +414,16 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold mb-4 text-primary-text">
+            <h3
+              className="text-3xl font-bold mb-4 text-primary-text"
+              // style={{ color: theme.text.primary }}
+            >
               Nilai-Nilai Kami
             </h3>
-            <p className="text-lg text-secondary-text">
+            <p
+              className="text-lg text-secondary-text"
+              // style={{ color: theme.text.secondary }}
+            >
               Prinsip-prinsip yang memandu setiap keputusan dan tindakan kami
             </p>
           </motion.div>
@@ -339,15 +439,33 @@ export default function AboutPage() {
               const IconComponent = value.icon;
               return (
                 <motion.div key={value.title} variants={fadeInUp}>
-                  <Card className="p-6 text-center h-full hover:shadow-lg transition-all duration-300 bg-primary-background border-primary-border">
+                  <Card
+                    className="p-6 text-center h-full hover:shadow-lg transition-all duration-300 bg-primary-background border border-border"
+                    // style={{
+                    //   backgroundColor: theme.bg.primary,
+                    //   borderColor: theme.border,
+                    // }}
+                  >
                     <CardContent className="p-0">
-                      <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-secondary-background">
-                        <IconComponent className="w-8 h-8 bg-accent-background" />
+                      <div
+                        className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-secondary-background"
+                        // style={{ backgroundColor: theme.bg.secondary }}
+                      >
+                        <IconComponent
+                          className="w-8 h-8 text-accent-background"
+                          //  style={{ color: theme.bg.accent }}
+                        />
                       </div>
-                      <h4 className="text-lg font-semibold mb-3 text-primary-text">
+                      <h4
+                        className="text-lg font-semibold mb-3 text-primary-text"
+                        //  style={{ color: theme.text.primary }}
+                      >
                         {value.title}
                       </h4>
-                      <p className="text-sm leading-relaxed text-secondary-text">
+                      <p
+                        className="text-sm leading-relaxed text-secondary-text"
+                        // style={{ color: theme.text.secondary }}
+                      >
                         {value.description}
                       </p>
                     </CardContent>
@@ -360,7 +478,10 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background">
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-priamry-background"
+        // style={{ backgroundColor: theme.bg.primary }}
+      >
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -368,10 +489,16 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold mb-4 text-primary-text">
+            <h3
+              className="text-3xl font-bold mb-4 text-primary-text"
+              // style={{ color: theme.text.primary }}
+            >
               Tim Expert Kami
             </h3>
-            <p className="text-lg text-secondary-text">
+            <p
+              className="text-lg text-secondary-text"
+              // style={{ color: theme.text.secondary }}
+            >
               Dipimpin oleh para ahli berpengalaman dari perusahaan teknologi
               terkemuka dunia
             </p>
@@ -384,41 +511,69 @@ export default function AboutPage() {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            {teamMembers.map((member) => (
+            {teamMembers.map((member, index) => (
               <motion.div key={member.name} variants={fadeInUp}>
-                <Card className="p-6 hover:shadow-lg transition-all duration-300 bg-primary-background border-primary-border">
+                <Card
+                  className="p-6 hover:shadow-lg transition-all duration-300 bg-primary-background border-border"
+                  // style={{
+                  //   backgroundColor: theme.bg.primary,
+                  //   borderColor: theme.border,
+                  // }}
+                >
                   <CardHeader className="p-0 mb-4">
                     <div className="flex items-start justify-between mb-3">
                       <div>
-                        <CardTitle className="text-xl mb-1 text-primary-text">
+                        <CardTitle
+                          className="text-xl mb-1 text-primary-text"
+                          // style={{ color: theme.text.primary }}
+                        >
                           {member.name}
                         </CardTitle>
-                        <p className="text-sm font-medium bg-accent-background">
+                        <p
+                          className="text-sm font-medium text-accent-background"
+                          // style={{ color: theme.bg.accent }}
+                        >
                           {member.role}
                         </p>
                       </div>
                       <Badge
                         variant="outline"
-                        className="text-xs bg-orange-background text-orange-background"
+                        className="text-xs border-orange-background text-orange-background"
+                        // style={{
+                        //   borderColor: theme.bg.orange + "50",
+                        //   color: theme.bg.orange,
+                        // }}
                       >
                         {member.experience}
                       </Badge>
                     </div>
-                    <p className="text-sm mb-2 text-secondary-text">
+                    <p
+                      className="text-sm mb-2 text-secondary-text"
+                      // style={{ color: theme.text.secondary }}
+                    >
                       <strong>Expertise:</strong> {member.expertise}
                     </p>
-                    <p className="text-sm mb-3 text-secondary-text">
+                    <p
+                      className="text-sm mb-3 text-secondary-text"
+                      //  style={{ color: theme.text.secondary }}
+                    >
                       <strong>Education:</strong> {member.education}
                     </p>
                   </CardHeader>
 
                   <CardContent className="p-0">
-                    <p className="text-sm leading-relaxed mb-4 text-secondary-text">
+                    <p
+                      className="text-sm leading-relaxed mb-4 text-secondary-text"
+                      // style={{ color: theme.text.secondary }}
+                    >
                       {member.description}
                     </p>
 
                     <div>
-                      <h5 className="text-sm font-semibold mb-2 text-primary-text">
+                      <h5
+                        className="text-sm font-semibold mb-2 text-primary-text"
+                        // style={{ color: theme.text.primary }}
+                      >
                         Key Achievements:
                       </h5>
                       <div className="space-y-1">
@@ -427,8 +582,14 @@ export default function AboutPage() {
                             key={idx}
                             className="flex items-center space-x-2"
                           >
-                            <div className="w-1.5 h-1.5 rounded-full bg-accent-background" />
-                            <span className="text-xs text-secondary-text">
+                            <div
+                              className="w-1.5 h-1.5 rounded-full bg-accent-background"
+                              // style={{ backgroundColor: theme.bg.accent }}
+                            />
+                            <span
+                              className="text-xs text-secondary-text"
+                              //  style={{ color: theme.text.secondary }}
+                            >
                               {achievement}
                             </span>
                           </div>
@@ -444,7 +605,10 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary-background">
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary-background"
+        // style={{ backgroundColor: theme.bg.secondary }}
+      >
         <div className="max-w-4xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -452,10 +616,16 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold mb-4 text-primary-text">
+            <h3
+              className="text-3xl font-bold mb-4 text-primary-text"
+              // style={{ color: theme.text.primary }}
+            >
               Perjalanan AmanAja
             </h3>
-            <p className="text-lg text-secondary-text">
+            <p
+              className="text-lg text-secondary-text"
+              // style={{ color: theme.text.secondary }}
+            >
               Dari ide hingga menjadi platform fraud detection terpercaya
             </p>
           </motion.div>
@@ -471,16 +641,28 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm bg-accent-background text-inverse-text">
+                  <div
+                    className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm bg-accent-background text-inverse-text"
+                    // style={{
+                    //   backgroundColor: theme.bg.accent,
+                    //   color: theme.text.inverse,
+                    // }}
+                  >
                     {milestone.year}
                   </div>
                 </div>
 
                 <div className="flex-1">
-                  <h4 className="text-xl font-semibold mb-2 text-primary-text">
+                  <h4
+                    className="text-xl font-semibold mb-2 text-primary-text"
+                    //  style={{ color: theme.text.primary }}
+                  >
                     {milestone.title}
                   </h4>
-                  <p className="text-sm leading-relaxed mb-3 text-secondary-text">
+                  <p
+                    className="text-sm leading-relaxed mb-3 text-secondary-text"
+                    // style={{ color: theme.text.secondary }}
+                  >
                     {milestone.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -488,7 +670,13 @@ export default function AboutPage() {
                       <Badge
                         key={idx}
                         variant="outline"
-                        className="text-xs border-orange-background text-orange-background border bg-orange-background"
+                        className="text-xs border-orange-background  text-orange-background bg-orange-background/30"
+                      
+                        // style={{
+                        //   borderColor: theme.bg.orange + "30",
+                        //   color: theme.bg.orange,
+                        //   backgroundColor: theme.bg.orange + "10",
+                        // }}
                       >
                         {achievement}
                       </Badge>
@@ -502,10 +690,14 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary-background">
+      <section
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-primary-background"
+        // style={{ backgroundColor: theme.bg.primary }}
+      >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h3
             className="text-3xl font-bold mb-6 text-primary-text"
+            // style={{ color: theme.text.primary }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -514,6 +706,7 @@ export default function AboutPage() {
           </motion.h3>
           <motion.p
             className="text-lg mb-8 text-secondary-text"
+            // style={{ color: theme.text.secondary }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -531,6 +724,10 @@ export default function AboutPage() {
             <Button
               size="lg"
               className="px-8 py-3 bg-accent-background text-inverse-text"
+              // style={{
+              //   backgroundColor: theme.bg.accent,
+              //   color: theme.text.inverse,
+              // }}
             >
               Mulai Lindungi Diri
             </Button>
@@ -538,7 +735,11 @@ export default function AboutPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-3 bg-transparent border border-border text-secondary-text"
+                className="px-8 py-3 bg-transparent border-border text-secondary-text"
+                // style={{
+                //   borderColor: theme.border,
+                //   color: theme.text.secondary,
+                // }}
               >
                 Kembali ke Beranda
               </Button>

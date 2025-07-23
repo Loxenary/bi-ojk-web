@@ -5,8 +5,9 @@ import { useRef } from "react";
 
 import { FeatureCard } from "./FeatureCard";
 import { FeatureItemInterface } from "@/constant/type";
-import { ChevronRight, Link } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface FeatureSectionProps {
   featureList: FeatureItemInterface[];

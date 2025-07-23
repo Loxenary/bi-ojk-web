@@ -53,9 +53,9 @@ export const Header = () => {
               >
                 <Shield className="w-6 h-6 text-inverse-text" />
               </motion.div>
-              <span className="text-2xl font-bold text-primary-text">
+              <a href="#" className="text-2xl font-bold text-primary-text">
                 AmanAja
-              </span>
+              </a>
             </motion.div>
 
             <div className="hidden md:block ml-10">
@@ -118,12 +118,6 @@ export const Header = () => {
                 </Button>
               </motion.div>
             )}
-
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="transition-all duration-200 text-inverse-text bg-accent-background">
-                Mulai Sekarang
-              </Button>
-            </motion.div>
           </div>
 
           <div className="md:hidden">
@@ -174,14 +168,7 @@ export const Header = () => {
                   </a>
                 )
               )}
-              <div className="pt-4 px-1">
-                <Button
-                  className="w-full bg-accent-background text-inverse-text"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Mulai Sekarang
-                </Button>
-              </div>
+              
             </div>
           </motion.div>
         )}
