@@ -4,14 +4,11 @@ import { motion } from "framer-motion";
 import { Shield, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { AboutItemInterface } from "@/constant/type";
 import { fadeInUp, staggerContainer } from "@/constant/style.constant";
+import Link from "next/link";
+import { phoneLinks } from "@/constant/content";
 
-interface FooterProps {
-  aboutItems: AboutItemInterface[];
-}
-
-export const Footer = ({ aboutItems }: FooterProps) => {
+export const Footer = () => {
   return (
     <footer className="py-20 px-4 sm:px-6 lg:px-8 text-primary-text bg-inverse-text">
       <div className="max-w-7xl mx-auto">
@@ -32,7 +29,9 @@ export const Footer = ({ aboutItems }: FooterProps) => {
                 <Shield className="w-7 h-7 text-white" />
               </motion.div>
               <div>
-                <div className="text-2xl font-bold text-primary-text">AmanAja</div>
+                <div className="text-2xl font-bold text-primary-text">
+                  AmanAja
+                </div>
                 <div className="text-sm text-gray-400">
                   AI Fraud Detection Platform
                 </div>
@@ -44,33 +43,14 @@ export const Footer = ({ aboutItems }: FooterProps) => {
               lebih aman.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="transition-all duration-200 bg-accent-background text-inverse-text">
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Mulai Chat
-              </Button>
+              <Link href={phoneLinks} target="_blank">
+                <Button className="transition-all duration-200 bg-accent-background text-inverse-text">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Mulai Chat
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
-
-          {aboutItems.map((section) => (
-            <motion.div key={section.title} variants={fadeInUp}>
-              <h4 className="font-semibold mb-6 text-white text-lg">
-                {section.title}
-              </h4>
-              <div className="space-y-3 text-gray-400">
-                {section.links.map((link) => (
-                  <motion.a
-                    key={link}
-                    href="#"
-                    className="block hover:text-white transition-colors"
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {link}
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
-          ))}
         </motion.div>
 
         <Separator className="my-12 bg-gray-800" />
@@ -83,21 +63,8 @@ export const Footer = ({ aboutItems }: FooterProps) => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-gray-400">
-            &copy; 2024 AmanAja. All rights reserved.
+            &copy; 2025 AmanAja. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            {["Privacy Policy", "Terms of Service", "Security"].map((link) => (
-              <motion.a
-                key={link}
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-              >
-                {link}
-              </motion.a>
-            ))}
-          </div>
         </motion.div>
       </div>
     </footer>

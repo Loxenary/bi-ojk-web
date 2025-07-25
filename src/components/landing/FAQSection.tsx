@@ -1,7 +1,6 @@
 import { fadeInUp, staggerContainer } from "@/constant/style.constant";
 import { motion } from "framer-motion";
-import { ChevronRight, Link } from "lucide-react";
-import { Button } from "../ui/button";
+import { ChevronRight } from "lucide-react";
 
 export const FAQSection = () => {
   return (
@@ -36,27 +35,27 @@ export const FAQSection = () => {
             {
               question: "Apakah AmanAja gratis?",
               answer:
-                "Ya, AmanAja gratis untuk penggunaan dasar. Kami juga menyediakan paket premium dengan fitur tambahan seperti perlindungan proaktif dan monitoring berkelanjutan untuk kebutuhan bisnis dan enterprise.",
+                "Ya, AmanAja untuk saat ini dapat diakses oleh siapa saja dan bersifat gratis",
             },
             {
               question: "Bagaimana cara kerja AI AmanAja?",
               answer:
-                "AI kami menganalisis pola teks, link, dan konten pesan untuk mendeteksi indikasi penipuan dengan akurasi 99.9%. Sistem kami menggunakan neural network dengan 50+ layer dan database penipuan yang terus diperbarui untuk memastikan deteksi yang akurat.",
+                "Aman Aja menggunakan AI dengan Gemini yang di fine-tune untuk kebutuhan fraud detection",
             },
             {
               question: "Apakah data saya aman?",
               answer:
-                "Sangat aman. Kami menggunakan enkripsi end-to-end dan tidak menyimpan data pribadi Anda. Semua pesan diproses secara lokal dan dihapus segera setelah analisis selesai, mengikuti prinsip zero-knowledge architecture.",
+                "Aman. Kami tidak menyimpan data pribadi anda. Data yang sebelumnya digunakan hanya disimpan sebagai sedikit context untuk deteksi berikutnya",
             },
             {
               question: "Berapa lama waktu analisis?",
               answer:
-                "Analisis dilakukan dalam hitungan detik, biasanya kurang dari 3 detik untuk mendapat hasil lengkap. Untuk kasus yang lebih kompleks, maksimal 5 detik dengan akurasi yang lebih tinggi.",
+                "Analisis dapat dilakukan dalam waktu rata-rata 1 menit",
             },
             {
-              question: "Apakah AmanAja bisa mendeteksi semua jenis penipuan?",
+              question: "Apakah Aman Aja dapat mendeteksi semua jenis penipuan?",
               answer:
-                "AmanAja dirancang untuk mendeteksi berbagai jenis penipuan digital, termasuk phishing, scam hadiah, penipuan investasi, dan banyak lagi. Sistem kami terus belajar dari pola baru dan diperbarui secara berkala untuk meningkatkan kemampuan deteksi.",
+                "Aman Aja dapat mendeteksi berbagai jenis penipuan digital termasuk phising, scam hadiah, penipuan investasi, dan sebagainya",
             },
           ].map((faq, index) => (
             <motion.div key={index} variants={fadeInUp} className="group">

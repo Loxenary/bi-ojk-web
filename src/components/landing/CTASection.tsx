@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { MessageCircle, Play } from "lucide-react";
+import Link from "next/link";
+import { phoneLinks } from "@/constant/content";
 
 export const CTASection = () => {
   return (
@@ -39,23 +41,27 @@ export const CTASection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button
-              size="lg"
-              className="px-10 py-4 text-lg transition-all duration-200 hover:shadow-lg bg-primary-background text-accent-background"
-            >
-              <MessageCircle className="w-6 h-6 mr-3" />
-              Mulai Chat Sekarang
-            </Button>
+            <Link href={phoneLinks} target="_blank">
+              <Button
+                size="lg"
+                className="px-10 py-4 text-lg transition-all duration-200 hover:shadow-lg bg-primary-background text-accent-background"
+              >
+                <MessageCircle className="w-6 h-6 mr-3" />
+                Mulai Chat Sekarang
+              </Button>
+            </Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 px-10 py-4 text-lg bg-transparent transition-all duration-200 !border-primary-background text-inverse-text !hover:border-white"
-            >
-              <Play className="w-6 h-6 mr-3" />
-              Lihat Demo
-            </Button>
+            <Link href={"/#cara-kerja"}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 px-10 py-4 text-lg bg-transparent transition-all duration-200 !border-primary-background text-inverse-text !hover:border-white"
+              >
+                <Play className="w-6 h-6 mr-3" />
+                Lihat Demo
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

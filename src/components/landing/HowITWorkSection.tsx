@@ -1,10 +1,22 @@
 import { motion } from "framer-motion";
-import { ChevronRight, Play} from "lucide-react";
+import { ChevronRight, Play } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import Image from "next/image";
+// Import useState and useRef from React
+import { useState, useRef } from "react";
 
 export const HowItWorksSection = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlayClick = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
   return (
     <section
       id="cara-kerja"
@@ -29,6 +41,7 @@ export const HowItWorksSection = () => {
             </p>
 
             <div className="space-y-4 mb-8">
+              {/* Step numbers... (code unchanged) */}
               <div className="flex items-start space-x-3">
                 <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5 bg-accent-background text-inverse-text">
                   1
@@ -43,7 +56,6 @@ export const HowItWorksSection = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-3">
                 <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5 bg-accent-background text-inverse-text">
                   2
@@ -58,7 +70,6 @@ export const HowItWorksSection = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-3">
                 <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5 bg-accent-background text-inverse-text">
                   3
@@ -97,26 +108,42 @@ export const HowItWorksSection = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="rounded-3xl p-6 shadow-xl bg-secondary-background ">
-              <div className="aspect-video rounded-xl overflow-hidden relative">
-                <div
-                  className="absolute inset-0 flex items-center justify-center"
-                  style={{ backgroundColor: "rgba(0,0,0,0.1)" }}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-16 h-16 rounded-full flex items-center justify-center bg-accent-background"
+              <div className="max-md:h-[800px] md:aspect-video rounded-xl overflow-hidden relative">
+                {!isPlaying && (
+                  <div
+                    className="absolute inset-0 flex items-center justify-center z-10 cursor-pointer"
+                    style={{ backgroundColor: "rgba(0,0,0,0.1)" }}
+                    onClick={handlePlayClick}
                   >
-                    <Play className="w-8 h-8 text-white" />
-                  </motion.div>
-                </div>
-                <Image
-                  height={400}
-                  width={600}
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="AmanAja Demo Video"
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="w-16 h-16 rounded-full flex items-center justify-center bg-accent-background"
+                    >
+                      <Play className="w-8 h-8 text-white" />
+                    </motion.div>
+                  </div>
+                )}
+
+                <video
+                  ref={videoRef}
                   className="w-full h-full object-cover"
-                />
+                  controls={isPlaying}
+                  onEnded={() => setIsPlaying(false)}
+                  playsInline
+                >
+                  <source
+                    src="/video/demo-high.mp4"
+                    type="video/mp4"
+                    media="(min-width: 768px)"
+                  />
+
+                  <source
+                    src="/video/demo-mobile.mp4"
+                    type="video/mp4"
+                    media="(max-width: 767px)"
+                  />
+                </video>
               </div>
               <div className="mt-6">
                 <h3 className="text-xl font-semibold mb-2 text-primary-text">

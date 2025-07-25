@@ -1,190 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
-  Send,
-  Search,
-  TrendingUp,
+  
   MessageCircle,
-  Brain,
-  Shield,
-  Zap,
-  Database,
-  Network,
-  CheckCircle,
-  Clock,
-  Users,
-  BarChart3,
-  Lock,
+  Sun,
+  Moon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
+import UserConcent from "@/components/how-it-works/UserConcent";
+import { useTheme } from "next-themes";
+import { dataUsageItems, detailedSteps, phoneLinks } from "@/constant/content";
+import Image from "next/image";
+import { fadeInUp } from "@/constant/style.constant";
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 60 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: "easeOut" },
-};
 
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
 
 export default function HowItWorksPage() {
-  const detailedSteps = [
-    {
-      icon: Send,
-      step: "1",
-      title: "Kirim Pesan",
-      subtitle: "Input & Data Collection",
-      description:
-        "Forward pesan mencurigakan ke nomor WhatsApp AmanAja atau screenshot dan kirim gambarnya.",
-      technicalDetails: [
-        "Support text, image, dan link analysis",
-        "OCR untuk screenshot pesan",
-        "Multi-format input processing",
-        "Real-time data validation",
-        "Secure data transmission",
-      ],
-      process: [
-        "User mengirim pesan ke WhatsApp AmanAja",
-        "Sistem menerima dan memvalidasi input",
-        "Data dienkripsi untuk keamanan",
-        "Queue processing untuk handling volume tinggi",
-        "Metadata extraction dan preprocessing",
-      ],
-    },
-    {
-      icon: Search,
-      step: "2",
-      title: "AI Analisis",
-      subtitle: "Machine Learning Processing",
-      description:
-        "Sistem AI menganalisis konten, pola, dan membandingkan dengan database penipuan terbaru.",
-      technicalDetails: [
-        "Multi-layer neural network analysis",
-        "NLP untuk pemahaman konteks",
-        "Pattern matching dengan 10M+ dataset",
-        "Real-time threat intelligence",
-        "Ensemble model untuk akurasi maksimal",
-      ],
-      process: [
-        "Text preprocessing dan tokenization",
-        "Feature extraction dari konten",
-        "AI model inference dengan 50+ parameters",
-        "Cross-reference dengan threat database",
-        "Confidence score calculation",
-      ],
-    },
-    {
-      icon: TrendingUp,
-      step: "3",
-      title: "Terima Hasil",
-      subtitle: "Result & Recommendation",
-      description:
-        "Dapatkan hasil analisis lengkap dengan tingkat risiko dan rekomendasi tindakan dalam hitungan detik.",
-      technicalDetails: [
-        "Comprehensive risk assessment",
-        "Actionable recommendations",
-        "Evidence-based explanation",
-        "Follow-up guidance",
-        "Report generation",
-      ],
-      process: [
-        "Risk level classification (Low/Medium/High)",
-        "Detailed explanation generation",
-        "Recommendation engine activation",
-        "User notification formatting",
-        "Response delivery via WhatsApp",
-      ],
-    },
-  ];
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const isDark = theme === "dark";
 
-  const aiTechnology = [
-    {
-      icon: Brain,
-      title: "Natural Language Processing",
-      description:
-        "Memahami konteks dan nuansa bahasa Indonesia termasuk slang dan bahasa daerah",
-      capabilities: [
-        "Sentiment analysis untuk deteksi urgency",
-        "Entity recognition untuk identifikasi target",
-        "Context understanding untuk false positive reduction",
-        "Multi-language support (15+ bahasa)",
-      ],
-    },
-    {
-      icon: Network,
-      title: "Deep Learning Models",
-      description:
-        "Neural network dengan arsitektur khusus untuk fraud detection",
-      capabilities: [
-        "Transformer-based architecture",
-        "50+ layer deep neural network",
-        "Attention mechanism untuk fokus pada pattern penting",
-        "Transfer learning dari model global",
-      ],
-    },
-    {
-      icon: Database,
-      title: "Threat Intelligence",
-      description:
-        "Database komprehensif dengan update real-time dari berbagai sumber",
-      capabilities: [
-        "10M+ known fraud patterns",
-        "Real-time threat feed integration",
-        "Community-sourced threat data",
-        "Global threat intelligence partnership",
-      ],
-    },
-    {
-      icon: Zap,
-      title: "Edge Computing",
-      description:
-        "Processing terdistribusi untuk latensi minimal dan skalabilitas tinggi",
-      capabilities: [
-        "Sub-100ms response time",
-        "Auto-scaling berdasarkan load",
-        "Geographic distribution",
-        "99.99% uptime guarantee",
-      ],
-    },
-  ];
-
-  const securityMeasures = [
-    {
-      icon: Lock,
-      title: "End-to-End Encryption",
-      description: "Semua komunikasi dienkripsi dengan standar militer AES-256",
-    },
-    {
-      icon: Shield,
-      title: "Zero-Knowledge Processing",
-      description:
-        "Data diproses tanpa disimpan, langsung dihapus setelah analisis",
-    },
-    {
-      icon: CheckCircle,
-      title: "Compliance & Audit",
-      description:
-        "Memenuhi standar ISO 27001, GDPR, dan regulasi perlindungan data lokal",
-    },
-    {
-      icon: Users,
-      title: "Privacy by Design",
-      description:
-        "Arsitektur sistem dirancang dengan privasi sebagai prioritas utama",
-    },
-  ];
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <div
@@ -230,22 +74,39 @@ export default function HowItWorksPage() {
               </h1>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Badge
-                className="px-3 py-1 bg-accent-background/20 border border-accent-background/30 text-accent-background"
-                // style={{
-                //   backgroundColor: theme.bg.accent + "20",
-                //   color: theme.bg.accent,
-                //   border: `1px solid ${theme.bg.accent}30`,
-                // }}
+            {mounted && (
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                3 Langkah Mudah
-              </Badge>
-            </motion.div>
+                <Button
+                  variant="ghost"
+                  onClick={() => setTheme(isDark ? "light" : "dark")}
+                  className="flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors"
+                  style={{
+                    backgroundColor: isDark ? "#262626" : "#F5F9FF",
+                  }}
+                >
+                  <motion.div
+                    animate={{ rotate: isDark ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {isDark ? (
+                      <div className="w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center">
+                        <Sun className="w-3 h-3 text-yellow-800" />
+                      </div>
+                    ) : (
+                      <div className="w-5 h-5 bg-gray-700 rounded-full flex items-center justify-center">
+                        <Moon className="w-3 h-3 text-gray-200" />
+                      </div>
+                    )}
+                  </motion.div>
+                  <span className="text-sm font-medium">
+                    {isDark ? "Light" : "Dark"}
+                  </span>
+                </Button>
+              </motion.div>
+            )}
           </div>
         </div>
       </header>
@@ -366,139 +227,45 @@ export default function HowItWorksPage() {
                       {step.description}
                     </p>
 
-                    <Tabs defaultValue="technical" className="w-full">
-                      <TabsList
-                        className="grid w-full grid-cols-2 mb-4 bg-secondary-background"
-                        // style={{ backgroundColor: theme.bg.secondary }}
-                      >
-                        <TabsTrigger value="technical">
-                          Detail Teknis
-                        </TabsTrigger>
-                        <TabsTrigger value="process">Proses</TabsTrigger>
-                      </TabsList>
-
-                      <TabsContent value="technical" className="space-y-3">
-                        {step.technicalDetails.map((detail, idx) => (
-                          <div key={idx} className="flex items-start space-x-3">
-                            <CheckCircle
-                              className="w-4 h-4 mt-0.5 flex-shrink-0 text-accent-background"
-                              // style={{ color: theme.bg.accent }}
-                            />
-                            <span
-                              className="text-sm text-secondary-text"
-                              // style={{ color: theme.text.secondary }}
-                            >
-                              {detail}
-                            </span>
+                    <div className="space-y-3">
+                      {step.process.map((process, idx) => (
+                        <div key={idx} className="flex items-start space-x-3">
+                          <div
+                            className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5 bg-accent-background/20 text-accent-background"
+                            // style={{
+                            //   backgroundColor: theme.bg.accent + "20",
+                            //   color: theme.bg.accent,
+                            // }}
+                          >
+                            {idx + 1}
                           </div>
-                        ))}
-                      </TabsContent>
-
-                      <TabsContent value="process" className="space-y-3">
-                        {step.process.map((process, idx) => (
-                          <div key={idx} className="flex items-start space-x-3">
-                            <div
-                              className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5 bg-accent-background/20 text-accent-background"
-                              // style={{
-                              //   backgroundColor: theme.bg.accent + "20",
-                              //   color: theme.bg.accent,
-                              // }}
-                            >
-                              {idx + 1}
-                            </div>
-                            <span
-                              className="text-sm text-secondary-text"
-                              // style={{ color: theme.text.secondary }}
-                            >
-                              {process}
-                            </span>
-                          </div>
-                        ))}
-                      </TabsContent>
-                    </Tabs>
+                          <span
+                            className="text-sm text-secondary-text"
+                            // style={{ color: theme.text.secondary }}
+                          >
+                            {process}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   <div className={index % 2 === 1 ? "lg:order-1" : ""}>
                     <Card
-                      className="p-8 bg-secondary-background border border-border"
+                      className="p-2 bg-secondary-background border border-border"
                       // style={{
                       //   backgroundColor: theme.bg.secondary,
                       //   borderColor: theme.border,
                       // }}
                     >
-                      <div className="text-center">
-                        <div
-                          className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-6 bg-primary-background"
-                          // style={{ backgroundColor: theme.bg.primary }}
-                        >
-                          <IconComponent
-                            className="w-12 h-12 text-accent-background"
-                            // style={{ color: theme.bg.accent }}
-                          />
-                        </div>
-                        <h5
-                          className="text-lg font-semibold mb-3 text-primary-text"
-                          // style={{ color: theme.text.primary }}
-                        >
-                          {step.title} Demo
-                        </h5>
-                        <div className="space-y-3 text-left">
-                          <div
-                            className="p-3 rounded-lg text-sm bg-primary-background"
-                            // style={{ backgroundColor: theme.bg.primary }}
-                          >
-                            <div className="flex items-center mb-2">
-                              <Clock
-                                className="w-4 h-4 mr-2 bg-accent-background"
-                                // style={{ color: theme.bg.accent }}
-                              />
-                              <span
-                                className="font-medium text-primary-text"
-                                // style={{ color: theme.text.primary }}
-                              >
-                                Processing Time
-                              </span>
-                            </div>
-                            <span
-                              className="text-secondary-text"
-                              // style={{ color: theme.text.secondary }}
-                            >
-                              {index === 0
-                                ? "< 1 detik"
-                                : index === 1
-                                ? "2-3 detik"
-                                : "< 1 detik"}
-                            </span>
-                          </div>
-                          <div
-                            className="p-3 rounded-lg text-sm bg-primary-background"
-                            // style={{ backgroundColor: theme.bg.primary }}
-                          >
-                            <div className="flex items-center mb-2">
-                              <BarChart3
-                                className="w-4 h-4 mr-2 bg-orange-background"
-                                // style={{ color: theme.bg.orange }}
-                              />
-                              <span
-                                className="font-medium text-primary-text"
-                                // style={{ color: theme.text.primary }}
-                              >
-                                Akurasi
-                              </span>
-                            </div>
-                            <span
-                              className="text-secondary-text"
-                              // style={{ color: theme.text.secondary }}
-                            >
-                              {index === 0
-                                ? "100%"
-                                : index === 1
-                                ? "99.9%"
-                                : "99.9%"}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <CardContent>
+                        <Image
+                          src={`/images${step.image}`}
+                          alt={"Step 1"}
+                          width={1920}
+                          height={1080}
+                        />
+                      </CardContent>
                     </Card>
                   </div>
                 </motion.div>
@@ -508,106 +275,9 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* AI Technology */}
-      <section
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary-background"
-        // style={{ backgroundColor: theme.bg.secondary }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h3
-              className="text-3xl font-bold mb-4 text-primary-text"
-              // style={{ color: theme.text.primary }}
-            >
-              Teknologi AI di Balik AmanAja
-            </h3>
-            <p
-              className="text-lg text-secondary-text"
-              //  style={{ color: theme.text.secondary }}
-            >
-              Kombinasi teknologi machine learning terdepan untuk hasil yang
-              optimal
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid md:grid-cols-2 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {aiTechnology.map((tech) => {
-              const IconComponent = tech.icon;
-              return (
-                <motion.div key={tech.title} variants={fadeInUp}>
-                  <Card
-                    className="p-6 h-full hover:shadow-lg transition-all duration-300 bg-primary-background border border-border"
-                    // style={{
-                    //   backgroundColor: theme.bg.primary,
-                    //   borderColor: theme.border,
-                    // }}
-                  >
-                    <CardHeader className="p-0 mb-4">
-                      <div className="flex items-center mb-3">
-                        <div
-                          className="w-12 h-12 rounded-xl flex items-center justify-center mr-3 bg-secondary-background"
-                          // style={{ backgroundColor: theme.bg.secondary }}
-                        >
-                          <IconComponent
-                            className="w-6 h-6 text-accent-background"
-                            // style={{ color: theme.bg.accent }}
-                          />
-                        </div>
-                        <CardTitle
-                          className="text-lg text-primary-text"
-                          // style={{ color: theme.text.primary }}
-                        >
-                          {tech.title}
-                        </CardTitle>
-                      </div>
-                      <p
-                        className="text-sm leading-relaxed text-secondary-text"
-                        // style={{ color: theme.text.secondary }}
-                      >
-                        {tech.description}
-                      </p>
-                    </CardHeader>
-
-                    <CardContent className="p-0">
-                      <div className="space-y-2">
-                        {tech.capabilities.map((capability, idx) => (
-                          <div key={idx} className="flex items-start space-x-2">
-                            <div
-                              className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-orange-background"
-                              // style={{ backgroundColor: theme.bg.orange }}
-                            />
-                            <span
-                              className="text-xs text-secondary-text"
-                              // style={{ color: theme.text.secondary }}
-                            >
-                              {capability}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
-      </section>
-
       {/* Security Measures */}
       <section
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background"
+        className="pt-20 px-4 sm:px-6 lg:px-8 bg-primary-background"
         // style={{ backgroundColor: theme.bg.primary }}
       >
         <div className="max-w-7xl mx-auto">
@@ -630,59 +300,14 @@ export default function HowItWorksPage() {
               Standar keamanan enterprise untuk melindungi data dan privasi Anda
             </p>
           </motion.div>
-
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {securityMeasures.map((measure) => {
-              const IconComponent = measure.icon;
-              return (
-                <motion.div key={measure.title} variants={fadeInUp}>
-                  <Card
-                    className="p-6 text-center h-full hover:shadow-lg transition-all duration-300 bg-primary-background border border-border"
-                    // style={{
-                    //   backgroundColor: theme.bg.primary,
-                    //   borderColor: theme.border,
-                    // }}
-                  >
-                    <CardContent className="p-0">
-                      <div
-                        className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-secondary-background"
-                        // style={{ backgroundColor: theme.bg.secondary }}
-                      >
-                        <IconComponent
-                          className="w-8 h-8 text-accent-background"
-                          // style={{ color: theme.bg.accent }}
-                        />
-                      </div>
-                      <h4
-                        className="text-lg font-semibold mb-3 text-primary-text"
-                        // style={{ color: theme.text.primary }}
-                      >
-                        {measure.title}
-                      </h4>
-                      <p
-                        className="text-sm leading-relaxed text-secondary-text"
-                        // style={{ color: theme.text.secondary }}
-                      >
-                        {measure.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </motion.div>
         </div>
       </section>
 
+      <UserConcent dataUsageItems={dataUsageItems} />
+
       {/* CTA Section */}
       <section
-        className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-background"
+        className="py-16 px-4 sm:px-6 mt-20 lg:px-8 bg-secondary-background"
         // style={{ backgroundColor: theme.bg.secondary }}
       >
         <div className="max-w-4xl mx-auto text-center">
@@ -713,17 +338,19 @@ export default function HowItWorksPage() {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            <Button
-              size="lg"
-              className="px-8 py-3 bg-accent-background text-inverse-text"
-              // style={{
-              //   backgroundColor: theme.bg.accent,
-              //   color: theme.text.inverse,
-              // }}
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Coba Sekarang
-            </Button>
+            <Link href={phoneLinks} target="_blank">
+              <Button
+                size="lg"
+                className="px-8 py-3 bg-accent-background text-inverse-text"
+                // style={{
+                //   backgroundColor: theme.bg.accent,
+                //   color: theme.text.inverse,
+                // }}
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Coba Sekarang
+              </Button>
+            </Link>
             <Link href="/">
               <Button
                 size="lg"

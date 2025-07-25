@@ -5,10 +5,11 @@ import { Brain, MessageCircle, Play, Shield } from "lucide-react";
 import {
   fadeInLeft,
   fadeInRight,
-  scaleIn,
   staggerContainer,
 } from "@/constant/style.constant";
 import Image from "next/image";
+import Link from "next/link";
+import { phoneLinks } from "@/constant/content";
 
 const IMAGES = {
   hero_image: "/images/contoh_penipuan.jpg",
@@ -17,7 +18,6 @@ const IMAGES = {
 export const HeroSection = () => {
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true, margin: "-100px" });
-
   return (
     <section
       ref={heroRef}
@@ -84,13 +84,15 @@ export const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button
-                  size="lg"
-                  className="px-8 py-4 text-lg transition-all duration-200 hover:shadow-lg bg-accent-background text-inverse-text"
-                >
-                  <MessageCircle className="w-6 h-6 mr-3" />
-                  Chat di WhatsApp
-                </Button>
+                <Link href={phoneLinks} target="_blank">
+                  <Button
+                    size={"lg"}
+                    className="px-8 py-4 text-lg transition-all duration-200 hover:shadow-lg bg-accent-background text-inverse-text"
+                  >
+                    <MessageCircle className="w-6 h-6 mr-3" />
+                    Chat di WhatsApp
+                  </Button>
+                </Link>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -106,31 +108,6 @@ export const HeroSection = () => {
                 </Button>
               </motion.div>
             </motion.div>
-
-            {/* Stats */}
-            {/* <motion.div
-              className="grid grid-cols-3 gap-6 pt-8"
-              variants={staggerContainer}
-              initial="initial"
-              animate={heroInView ? "animate" : "initial"}
-            >
-              {[
-                { value: "25K+", label: "Pengguna Terlindungi" },
-                { value: "99.9%", label: "Akurasi AI" },
-                { value: "24/7", label: "Perlindungan" },
-              ].map((stat) => (
-                <motion.div
-                  key={stat.label}
-                  className="text-center relative group text-primary-text"
-                  variants={scaleIn}
-                  whileHover={{ y: -2 }}
-                >
-                  <div className="absolute top-0 right-4 w-2 h-2 rounded-full " />
-                  <div className="text-3xl font-bold mb-2 ">{stat.value}</div>
-                  <div className="text-sm text-muted-text">{stat.label}</div>
-                </motion.div>
-              ))}
-            </motion.div> */}
           </motion.div>
 
           {/* Right Side - Image */}
