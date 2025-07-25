@@ -260,7 +260,7 @@ export default function AboutPage() {
                 {[
                   "Menurunkan tingkat keberhasilan penipuan melalui platform setidaknya 30%",
                   "Memproses laporan dengan skala besar minimal 15,000 laporan tiap bulannya",
-                  "Mengidentifikasi entitas illegal baru dengan menyimpan 2500 rekening, 500 nomor telepon, dan 500 URL berbahaya pada tiap bulannya",
+                  "Mengidentifikasi entitas illegal baru melalui nomor telpon dan nomor rekeningnya",
                   "Menyediakan akses untuk verifikasi rekening atau nomor telepon dengan mudah",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-3">
@@ -507,13 +507,15 @@ export default function AboutPage() {
             transition={{ delay: 0.4 }}
           >
             <Link
-              className="px-8 py-3 bg-accent-background text-inverse-text"
+              target="_blank"
               href={phoneLinks} // style={{
               //   backgroundColor: theme.bg.accent,
               //   color: theme.text.inverse,
               // }}
             >
+              <Button className="px-8 py-3 bg-accent-background text-inverse-text">
               Mulai Lindungi Diri
+              </Button>
             </Link>
             <Link href="/">
               <Button
