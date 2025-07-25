@@ -33,21 +33,6 @@ export default function AmanAjaWebsite() {
     },
   ];
 
-  const aboutItems = [
-    {
-      title: "Platform",
-      links: [
-        "AI Detection",
-        "WhatsApp Bot",
-        "Real-time Analysis",
-        "Security Reports",
-      ],
-    },
-    {
-      title: "Support",
-      links: ["Help Center", "Documentation", "Community", "Contact Us"],
-    },
-  ];
 
   return (
     <div className="bg-primary-background text-primary-text min-h-screen transition-colors duration-300 max-w-screen overflow-x-hidden">
@@ -67,7 +52,7 @@ export default function AmanAjaWebsite() {
 
       <CTASection />
 
-      <Footer aboutItems={aboutItems} />
+      <Footer  />
     </div>
   );
 }
