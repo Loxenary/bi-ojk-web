@@ -125,6 +125,8 @@ export const HowItWorksSection = () => {
                       className="w-16 h-16 rounded-full flex items-center justify-center bg-accent-background"
                     >
                       <Play className="w-8 h-8 text-white" />
+
+                      
                     </motion.div>
                   </div>
                 )}
