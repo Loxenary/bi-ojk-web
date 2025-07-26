@@ -60,7 +60,8 @@ export const CTASection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 px-10 py-4 text-lg bg-transparent transition-all duration-200 !border-primary-background text-white dark:text-black dark:hover:text-white dark:hover:bg-primary-background !hover:border-white"
+                className="border-2 px-10 py-4 text-lg bg-transparent transition-all duration-200 !border-primary-background text-white dark:text-black dark:hover:text-white dark:hover:bg-primary-background !hover:border-white
+                "
               >
                 <Play className="w-6 h-6 mr-3" />
                 Lihat Demo
