@@ -65,20 +65,18 @@ export const Header = () => {
                 initial="initial"
                 animate="animate"
               >
-                {["Tentang Kami", "Cara Kerja", "Testimoni", "FAQ"].map(
-                  (item) => (
-                    <motion.a
-                      key={item}
-                      href={`#${item.toLowerCase().replace(" ", "-")}`}
-                      className="px-3 py-2 text-sm font-medium transition-colors duration-200 text-secondary-text"
-                      variants={fadeInUp}
-                      whileHover={whileHover}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      {item}
-                    </motion.a>
-                  )
-                )}
+                {["Tentang Kami", "Cara Kerja", "FAQ"].map((item) => (
+                  <motion.a
+                    key={item}
+                    href={`#${item.toLowerCase().replace(" ", "-")}`}
+                    className="px-3 py-2 text-sm font-medium transition-colors duration-200 text-secondary-text"
+                    variants={fadeInUp}
+                    whileHover={whileHover}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {item}
+                  </motion.a>
+                ))}
               </motion.div>
             </div>
           </div>
@@ -156,19 +154,16 @@ export const Header = () => {
             className="md:hidden overflow-hidden border-t border-primary-border"
           >
             <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-              {["Tentang Kami", "Cara Kerja", "Testimoni", "FAQ"].map(
-                (item) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase().replace(" ", "-")}`}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block rounded-md px-3 py-2 text-base font-medium text-secondary-text hover:bg-secondary-background"
-                  >
-                    {item}
-                  </a>
-                )
-              )}
-              
+              {["Tentang Kami", "Cara Kerja", "FAQ"].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block rounded-md px-3 py-2 text-base font-medium text-secondary-text hover:bg-secondary-background"
+                >
+                  {item}
+                </a>
+              ))}
             </div>
           </motion.div>
         )}

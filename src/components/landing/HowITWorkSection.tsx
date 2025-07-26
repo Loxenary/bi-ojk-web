@@ -20,7 +20,7 @@ export const HowItWorksSection = () => {
   return (
     <section
       id="cara-kerja"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background"
+      className="py-20 xl:py-30 px-4 sm:px-6 lg:px-8 bg-primary-background"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -86,12 +86,16 @@ export const HowItWorksSection = () => {
               </div>
             </div>
 
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              style={{ transformOrigin: "left center" }}
+            >
               <Link href="/how-it-works">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="px-8 py-4 text-lg transition-all duration-200 bg-transparent border text-accent-background border-accent-background"
+                  className="px-8 py-4 text-lg transition-all duration-200 bg-transparent hover:bg-accent-background/10 border text-accent-background border-accent-background"
                 >
                   Pelajari Lebih Lanjut
                   <ChevronRight className="w-5 h-5 ml-2" />

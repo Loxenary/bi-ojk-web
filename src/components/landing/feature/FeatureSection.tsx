@@ -23,7 +23,7 @@ export const FeatureSection = ({ featureList }: FeatureSectionProps) => {
     <section
       ref={featuresRef}
       id="tentang-kami"
-      className="py-20 px-4 sm:px-6 lg:px-8  bg-primary-background"
+      className="py-20 xl:py-30 px-4 sm:px-6 lg:px-8  bg-primary-background"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -74,7 +74,7 @@ export const FeatureSection = ({ featureList }: FeatureSectionProps) => {
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-4 text-lg transition-all duration-200 bg-transparent border border-accent-background text-accent-background"
+                className="px-8 py-4 text-lg transition-all duration-200 bg-transparent hover:bg-accent-background/10 border border-accent-background text-accent-background"
               >
                 Tentang Kami
                 <ChevronRight className="w-5 h-5 ml-2" />

@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { phoneLinks } from "@/constant/content";
 
-
 export const WhatsAppFloatingButton = () => {
   const IMAGES = {
     WHATSAPP_ICON: "images/whatsapp-icon.svg",
@@ -27,7 +26,7 @@ export const WhatsAppFloatingButton = () => {
         }}
       >
         <Link href={phoneLinks} target="_blank">
-          <Button className=" rounded-full md:w-20 md:h-20 w-16 h-16 p-3 shadow-lg transition-all duration-300 bg-transparent text-inverse-text">
+          <Button className=" rounded-full md:w-20 md:h-20 w-16 h-16 p-3 shadow-lg transition-all duration-300 bg-transparent hover:bg-white/10 text-inverse-text">
             {/* <MessageCircle className="w-7 h-7" /> */}
             <Image
               src={IMAGES.WHATSAPP_ICON}

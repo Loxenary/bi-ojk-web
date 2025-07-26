@@ -21,7 +21,7 @@ export const HeroSection = () => {
   return (
     <section
       ref={heroRef}
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background min-h-screen flex items-center"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -87,7 +87,7 @@ export const HeroSection = () => {
                 <Link href={phoneLinks} target="_blank">
                   <Button
                     size={"lg"}
-                    className="px-8 py-4 text-lg transition-all duration-200 hover:shadow-lg bg-accent-background text-inverse-text"
+                    className="px-8 py-4 text-lg transition-all duration-200 hover:shadow-lg bg-accent-background hover:bg-accent-background/90 text-inverse-text"
                   >
                     <MessageCircle className="w-6 h-6 mr-3" />
                     Chat di WhatsApp
@@ -98,14 +98,16 @@ export const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="px-8 py-4 text-lg transition-all duration-200 bg-transparent border-primary-border text-secondary-text"
-                >
-                  <Play className="w-6 h-6 mr-3" />
-                  Lihat Demo
-                </Button>
+                <Link href={"/#cara-kerja"} scroll={true}>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="px-8 py-4 text-lg transition-all duration-200 bg-transparent border-primary-border text-primary-text"
+                  >
+                    <Play className="w-6 h-6 mr-3" />
+                    Lihat Demo
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
           </motion.div>

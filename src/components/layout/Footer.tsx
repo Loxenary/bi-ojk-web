@@ -23,7 +23,7 @@ export const Footer = () => {
             <div className="flex items-center mb-6">
               <motion.div
                 className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 bg-accent-background"
-                whileHover={{ rotate: 360, scale: 1.1 }}
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.5 }}
               >
                 <Shield className="w-7 h-7 text-white" />
@@ -42,9 +42,13 @@ export const Footer = () => {
               teknologi AI terdepan. Bersama-sama kita ciptakan internet yang
               lebih aman.
             </p>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              style={{ transformOrigin: "left center" }}
+            >
               <Link href={phoneLinks} target="_blank">
-                <Button className="transition-all duration-200 bg-accent-background text-inverse-text">
+                <Button className="transition-all duration-200 bg-accent-background hover:bg-accent-background/90 text-inverse-text dark:hover:text-white">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   Mulai Chat
                 </Button>

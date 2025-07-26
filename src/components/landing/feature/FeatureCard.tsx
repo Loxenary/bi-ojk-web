@@ -40,7 +40,7 @@ export const FeatureCard = ({
         <CardContent className="p-0 relative">
           <motion.div
             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 relative transition-colors bg-secondary-background"
-            whileHover={{ rotate: 360 }}
+            whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5 }}
           >
             <IconComponent className="w-8 h-8 text-accent-background" />

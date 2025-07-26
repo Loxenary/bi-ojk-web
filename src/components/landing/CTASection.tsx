@@ -40,11 +40,15 @@ export const CTASection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            style={{ transformOrigin: "center" }}
+          >
             <Link href={phoneLinks} target="_blank">
               <Button
                 size="lg"
-                className="px-10 py-4 text-lg transition-all duration-200 hover:shadow-lg bg-primary-background text-accent-background"
+                className="px-10 py-4 text-lg transition-all duration-200 hover:shadow-lg bg-primary-background hover:bg-primary-background/90 text-accent-background dark:hover:text-white"
               >
                 <MessageCircle className="w-6 h-6 mr-3" />
                 Mulai Chat Sekarang
@@ -56,7 +60,7 @@ export const CTASection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 px-10 py-4 text-lg bg-transparent transition-all duration-200 !border-primary-background text-inverse-text !hover:border-white"
+                className="border-2 px-10 py-4 text-lg bg-transparent transition-all duration-200 !border-primary-background text-white dark:text-black dark:hover:text-white dark:hover:bg-primary-background !hover:border-white"
               >
                 <Play className="w-6 h-6 mr-3" />
                 Lihat Demo
