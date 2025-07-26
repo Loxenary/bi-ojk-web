@@ -8,6 +8,7 @@ import { FeatureItemInterface } from "@/constant/type";
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { section } from "framer-motion/client";
 
 interface FeatureSectionProps {
   featureList: FeatureItemInterface[];
@@ -62,7 +63,7 @@ export const FeatureSection = ({ featureList }: FeatureSectionProps) => {
         </motion.div>
 
         <motion.div
-          className="text-center mt-12"
+          className="text-center mt-12 w-full flex justify-center items-center"
           initial={{ opacity: 0, y: 30 }}
           animate={
             featuresInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }

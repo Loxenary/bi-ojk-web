@@ -1,6 +1,7 @@
-import { Clock, Database, Eye,  Search, Send, TrendingUp } from "lucide-react";
+import { Clock, Database, Eye, Search, Send, TrendingUp } from "lucide-react";
 
-export const phoneLinks = "https://wa.link/ddpnpc"
+export const phoneLinks =
+  process.env.NEXT_PUBLIC_PHONE_LINKS || "https://wa.link/ddpnpc";
 
 export const dataUsageItems = [
   {
@@ -21,7 +22,6 @@ export const dataUsageItems = [
     description:
       "Data tidak digunakan selain keperluan context dan sentiment analysis ",
   },
-  
 ];
 
 export const detailedSteps = [
@@ -45,9 +45,9 @@ export const detailedSteps = [
       "Data diubah menjadi bentuk Vector",
       "Data melalui OCR disimpan pada masing masing QDrant",
     ],
-    image: "/step1.png"
+    image: "/step1.png",
   },
-{
+  {
     icon: Search,
     step: "2",
     title: "AI Analisis",
@@ -68,7 +68,7 @@ export const detailedSteps = [
       "Sentiment Analysis",
       "Menyimpan pada RAG sebagai token",
     ],
-    image : "/step2.png"
+    image: "/step2.png",
   },
   {
     icon: TrendingUp,
@@ -90,6 +90,6 @@ export const detailedSteps = [
       "Pengguna akan diberikan pula kesimpulan",
       "Mengulang kembali input diawal",
     ],
-    image: "/step3.png"
+    image: "/step3.png",
   },
 ];

@@ -43,9 +43,10 @@ export const Footer = () => {
               lebih aman.
             </p>
             <motion.div
+              className="w-fit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              style={{ transformOrigin: "left center" }}
+              style={{ transformOrigin: "center" }}
             >
               <Link href={phoneLinks} target="_blank">
                 <Button className="transition-all duration-200 bg-accent-background hover:bg-accent-background/90 text-inverse-text dark:hover:text-white">

@@ -89,7 +89,8 @@ export const HowItWorksSection = () => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              style={{ transformOrigin: "left center" }}
+              style={{ transformOrigin: "center" }}
+              className="w-fit"
             >
               <Link href="/how-it-works">
                 <Button
@@ -125,8 +126,6 @@ export const HowItWorksSection = () => {
                       className="w-16 h-16 rounded-full flex items-center justify-center bg-accent-background"
                     >
                       <Play className="w-8 h-8 text-white" />
-
-                      
                     </motion.div>
                   </div>
                 )}
