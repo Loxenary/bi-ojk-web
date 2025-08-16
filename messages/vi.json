@@ -1,0 +1,281 @@
+{
+  "Header": {
+    "nav": {
+      "about": "Về Chúng Tôi",
+      "howItWorks": "Cách Hoạt Động",
+      "faq": "Câu Hỏi Thường Gặp"
+    },
+    "themeToggle": {
+      "light": "Sáng",
+      "dark": "Tối"
+    },
+    "LanguageSwitcher": {
+      "indonesian": "Tiếng Indonesia",
+      "english": "Tiếng Anh",
+      "malay": "Tiếng Mã Lai",
+      "vietnamese": "Tiếng Việt",
+      "thai": "Tiếng Thái",
+      "tagalog": "Tiếng Tagalog"
+    }
+  },
+  "HeroSection": {
+    "title": "Bảo vệ bản thân khỏi <accent>Lừa đảo Kỹ thuật số</accent> bằng AI",
+    "subtitle": "AmanAja sử dụng trí tuệ nhân tạo để phát hiện và ngăn chặn lừa đảo kỹ thuật số trong thời gian thực. Dễ sử dụng, chính xác và đáng tin cậy.",
+    "cta_whatsapp": "Trò chuyện trên WhatsApp",
+    "cta_demo": "Xem Demo"
+  },
+  "FeatureSection": {
+    "title": "Tại sao chọn <accent>AmanAja</accent>?",
+    "subtitle": "Các tính năng tuyệt vời giúp AmanAja trở thành lựa chọn tốt nhất để bảo vệ kỹ thuật số của bạn.",
+    "cta_about": "Về Chúng Tôi",
+    "features": [
+      {
+        "title": "Lưu trữ Tin nhắn",
+        "description": "Tin nhắn WhatsApp của bạn được lưu trữ tạm thời để phân tích AI và sẽ tự động bị xóa sau khi phân tích hoàn tất."
+      },
+      {
+        "title": "Truy cập Hạn chế",
+        "description": "Các nhà phát triển hoặc quản trị viên không thể truy cập vào cơ sở dữ liệu."
+      },
+      {
+        "title": "Sử dụng Dữ liệu",
+        "description": "Dữ liệu không được sử dụng cho các mục đích khác ngoài phân tích bối cảnh và tình cảm."
+      }
+    ]
+  },
+  "HowItWorksSection": {
+    "title": "Cách <accent>AmanAja</accent> Hoạt động",
+    "subtitle": "AmanAja hoạt động qua 3 bước đơn giản: Gửi tin nhắn đáng ngờ đến WhatsApp của chúng tôi, AI của chúng tôi sẽ phân tích nội dung và các mẫu lừa đảo, sau đó bạn nhận được kết quả phân tích cùng với các hành động được đề xuất trong vài giây.",
+    "steps": [
+      {
+        "title": "Gửi Tin nhắn",
+        "description": "Chuyển tiếp tin nhắn đáng ngờ đến WhatsApp của AmanAja hoặc gửi ảnh chụp màn hình."
+      },
+      {
+        "title": "Phân tích AI",
+        "description": "Hệ thống AI phân tích nội dung và so sánh với cơ sở dữ liệu lừa đảo."
+      },
+      {
+        "title": "Nhận Kết quả",
+        "description": "Nhận kết quả phân tích với mức độ rủi ro và các hành động được đề xuất."
+      }
+    ],
+    "cta_learnMore": "Tìm hiểu thêm",
+    "video_title": "Xem Demo AmanAja",
+    "video_description": "Xem cách AmanAja phát hiện và ngăn chặn các loại lừa đảo kỹ thuật số khác nhau trong thời gian thực."
+  },
+  "CTASection": {
+    "title": "Sẵn sàng Bảo vệ Bản thân?",
+    "subtitle": "Tham gia cùng hàng ngàn người dùng đã trải nghiệm bảo mật nhiều lớp của AmanAja. Bắt đầu bảo vệ bản thân ngay hôm nay!",
+    "cta_chat": "Bắt đầu Trò chuyện Ngay",
+    "cta_demo": "Xem Demo"
+  },
+  "FAQSection": {
+    "title": "Các câu hỏi <accent>thường gặp</accent>",
+    "subtitle": "Câu trả lời cho các câu hỏi thường gặp về AmanAja",
+    "questions": [
+      {
+        "question": "AmanAja có miễn phí không?",
+        "answer": "Có, AmanAja hiện tại có thể truy cập được cho mọi người và miễn phí."
+      },
+      {
+        "question": "AI của AmanAja hoạt động như thế nào?",
+        "answer": "AmanAja sử dụng AI với Gemini, được tinh chỉnh cho nhu cầu phát hiện lừa đảo."
+      },
+      {
+        "question": "Dữ liệu của tôi có an toàn không?",
+        "answer": "An toàn. Chúng tôi không lưu trữ dữ liệu cá nhân của bạn. Dữ liệu đã sử dụng trước đó chỉ được lưu trữ dưới dạng một bối cảnh nhỏ cho lần phát hiện tiếp theo."
+      },
+      {
+        "question": "Phân tích mất bao lâu?",
+        "answer": "Phân tích có thể được hoàn thành trong trung bình 1 phút."
+      },
+      {
+        "question": "AmanAja có thể phát hiện tất cả các loại lừa đảo không?",
+        "answer": "AmanAja có thể phát hiện các loại lừa đảo kỹ thuật số khác nhau bao gồm lừa đảo qua mạng, lừa đảo giải thưởng, lừa đảo đầu tư, v.v."
+      }
+    ]
+  },
+  "Footer": {
+    "tagline": "Nền tảng Phát hiện Lừa đảo bằng AI",
+    "description": "Bảo vệ người dân Indonesia khỏi lừa đảo kỹ thuật số bằng công nghệ AI hàng đầu. Cùng nhau, chúng ta tạo ra một môi trường internet an toàn hơn.",
+    "cta_chat": "Bắt đầu Trò chuyện",
+    "copyright": "© 2025 AmanAja. Mọi quyền được bảo lưu."
+  },
+  "AboutPage": {
+    "header": {
+      "back": "Quay lại",
+      "title": "Về AmanAja",
+      "badge": "Thành lập 2022"
+    },
+    "hero": {
+      "title": "Bảo vệ Indonesia khỏi <accent>Lừa đảo Kỹ thuật số</accent>",
+      "subtitle": "AmanAja ra đời từ mối quan tâm sâu sắc về sự gia tăng các vụ lừa đảo kỹ thuật số ở Indonesia. Chúng tôi tin rằng công nghệ AI có thể là tuyến đầu trong việc bảo vệ công chúng khỏi mối đe dọa của tội phạm mạng.",
+      "stats": {
+        "users": "Người dùng được Bảo vệ",
+        "scams": "Lừa đảo bị Chặn",
+        "accuracy": "Độ chính xác của AI",
+        "monitoring": "Giám sát"
+      }
+    },
+    "mission": {
+      "title": "Sứ mệnh của Chúng tôi",
+      "description": "Tạo ra một công nghệ AI có thể được sử dụng bởi công chúng để với AI này, chúng tôi hy vọng rằng mọi người, cả những người am hiểu công nghệ và những người không, có thể tránh được tất cả các trường hợp lừa đảo xảy ra trong thế giới kỹ thuật số.",
+      "points": [
+        "Giảm tỷ lệ thành công của lừa đảo qua nền tảng ít nhất 30%",
+        "Xử lý báo cáo trên quy mô lớn, ít nhất 15.000 báo cáo mỗi tháng",
+        "Xác định các thực thể bất hợp pháp mới thông qua số điện thoại và tài khoản của họ",
+        "Cung cấp quyền truy cập dễ dàng để xác minh tài khoản ngân hàng hoặc số điện thoại"
+      ]
+    },
+    "values": {
+      "title": "Giá trị của Chúng tôi",
+      "subtitle": "Các nguyên tắc hướng dẫn mọi quyết định và hành động của chúng tôi",
+      "items": {
+        "security": {
+          "title": "Bảo mật là trên hết",
+          "description": "Chúng tôi đặt bảo mật và quyền riêng tư của người dùng lên hàng đầu."
+        },
+        "socialImpact": {
+          "title": "Tác động Xã hội",
+          "description": "Chúng tôi cam kết tạo ra một môi trường internet an toàn cho mọi người, đặc biệt là các nhóm dễ bị tổn thương như người cao tuổi."
+        },
+        "innovation": {
+          "title": "Đổi mới Liên tục",
+          "description": "Không ngừng đổi mới công nghệ để đối mặt với sự phát triển của các mối đe dọa mạng."
+        },
+        "community": {
+          "title": "Cộng đồng là trên hết",
+          "description": "Xây dựng các giải pháp cùng với cộng đồng bằng cách lắng nghe phản hồi và nhu cầu của người dùng."
+        }
+      }
+    },
+    "team": {
+      "title": "Đội ngũ Chuyên gia của Chúng tôi",
+      "subtitle": "Được dẫn dắt bởi các chuyên gia giàu kinh nghiệm từ các công ty công nghệ hàng đầu thế giới.",
+      "expertise": "Chuyên môn",
+      "education": "Học vấn",
+      "achievements": "Thành tựu Chính",
+      "members": [
+        {
+          "name": "Rizqi Andhika",
+          "role": "Hustler",
+          "expertise": "Chuyên gia Kinh doanh",
+          "education": "Học viện Công nghệ Bandung",
+          "description": "Một nhà phân tích kinh doanh và hustler tài ba.",
+          "achievements": ["Chủ sở hữu công ty bán hàng trò chơi", "GPA 4.0"]
+        },
+        {
+          "name": "Muhammad Akmal Ramadhan",
+          "role": "Hacker",
+          "expertise": "Chuyên gia AI và ML",
+          "education": "Học viện Công nghệ Bandung",
+          "description": "Một chuyên gia về Học máy và AI đã giành được nhiều chức vô địch.",
+          "achievements": ["Người chiến thắng Cuộc thi Khoa học Dữ liệu", "Dự án xuất sắc nhất trong chuyến đi Nhật Bản"]
+        },
+        {
+          "name": "Valentino Chryslie Triadi",
+          "role": "Hacker",
+          "expertise": "Chuyên gia DevOps và Dữ liệu",
+          "education": "Học viện Công nghệ Bandung",
+          "description": "Một Kỹ sư Phần mềm là chuyên gia trong lĩnh vực DevOps và hệ thống.",
+          "achievements": ["Trưởng ban tổ chức CNTT cho một sự kiện tại ITB", "GPA 4.0"]
+        },
+        {
+          "name": "Muhammad Davis Adhipramana",
+          "role": "Hipster",
+          "expertise": "Nhà phát triển Frontend",
+          "education": "Học viện Công nghệ Bandung",
+          "description": "Một Nhà phát triển Trò chơi và Kỹ sư Phần mềm tập trung vào hình ảnh.",
+          "achievements": ["Người chiến thắng Hackathon Kinh doanh", "Á quân Cuộc thi GameDev"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Tham gia Sứ mệnh của Chúng tôi",
+      "subtitle": "Hãy cùng nhau tạo ra một môi trường internet an toàn hơn cho mọi người.",
+      "button_protect": "Bắt đầu Bảo vệ Bản thân",
+      "button_home": "Quay lại Trang chủ"
+    }
+  },
+  "HowItWorksPage": {
+    "header": {
+      "back": "Quay lại",
+      "title": "Cách AmanAja Hoạt động",
+      "lightMode": "Sáng",
+      "darkMode": "Tối"
+    },
+    "hero": {
+      "title": "Công nghệ AI <accent>Dễ sử dụng</accent>",
+      "subtitle": "Tìm hiểu cách AmanAja sử dụng trí tuệ nhân tạo hàng đầu để bảo vệ bạn khỏi lừa đảo kỹ thuật số với một quy trình đơn giản và nhanh chóng."
+    },
+    "detailedSteps": {
+      "title": "Quy trình Phân tích AI Chi tiết",
+      "subtitle": "Mỗi bước được thiết kế để cung cấp kết quả chính xác và đáng tin cậy.",
+      "stepLabel": "Bước",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Gửi Tin nhắn",
+          "subtitle": "Đầu vào & Thu thập Dữ liệu",
+          "description": "Chuyển tiếp tin nhắn đáng ngờ đến số WhatsApp của AmanAja hoặc chụp ảnh màn hình và gửi hình ảnh.",
+          "process": [
+            "Người dùng gửi tin nhắn đến WhatsApp của AmanAja",
+            "Hệ thống nhận và xác thực đầu vào",
+            "Dữ liệu được chuyển đổi sang định dạng Vector",
+            "Dữ liệu được xử lý qua OCR được lưu trữ trong các phiên bản QDrant tương ứng"
+          ]
+        },
+        {
+          "step": "2",
+          "title": "Phân tích AI",
+          "subtitle": "Xử lý Học máy",
+          "description": "Hệ thống AI phân tích nội dung, các mẫu và so sánh với cơ sở dữ liệu lừa đảo mới nhất.",
+          "process": [
+            "Tiền xử lý văn bản và mã hóa",
+            "Trích xuất đặc trưng từ nội dung",
+            "Sử dụng Mô hình Gemini được tinh chỉnh để có kết quả",
+            "Phân tích Tình cảm",
+            "Lưu trữ trong RAG dưới dạng mã thông báo"
+          ]
+        },
+        {
+          "step": "3",
+          "title": "Nhận Kết quả",
+          "subtitle": "Kết quả & Khuyến nghị",
+          "description": "Nhận kết quả phân tích hoàn chỉnh với mức độ rủi ro và các hành động được đề xuất trong vài giây.",
+          "process": [
+            "Kết quả được gửi cho người dùng",
+            "Người dùng sẽ được cung cấp một mức độ tin cậy",
+            "Người dùng cũng sẽ được cung cấp một bản tóm tắt",
+            "Khởi động lại quy trình nhập liệu từ đầu"
+          ]
+        }
+      ]
+    },
+    "security": {
+      "title": "Đảm bảo An ninh & Quyền riêng tư",
+      "subtitle": "Các tiêu chuẩn bảo mật doanh nghiệp để bảo vệ dữ liệu và quyền riêng tư của bạn.",
+      "items": [
+        {
+          "title": "Lưu trữ Tin nhắn",
+          "description": "Tin nhắn WhatsApp của bạn được lưu trữ tạm thời để phân tích AI và sẽ tự động bị xóa sau khi phân tích hoàn tất."
+        },
+        {
+          "title": "Truy cập Hạn chế",
+          "description": "Các nhà phát triển hoặc quản trị viên không thể truy cập vào cơ sở dữ liệu."
+        },
+        {
+          "title": "Sử dụng Dữ liệu",
+          "description": "Dữ liệu không được sử dụng cho các mục đích khác ngoài phân tích bối cảnh và tình cảm."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Sẵn sàng Thử Công nghệ AI này?",
+      "subtitle": "Tự mình trải nghiệm tốc độ và độ chính xác của hệ thống AI của AmanAja trong việc bảo vệ bạn.",
+      "button_try": "Thử ngay",
+      "button_home": "Quay lại Trang chủ"
+    }
+  }
+}

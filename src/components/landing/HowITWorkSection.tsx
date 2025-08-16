@@ -1,13 +1,15 @@
-import { motion } from "framer-motion";
+"use client";
+
+import { motion, useInView } from "framer-motion";
 import { ChevronRight, Play } from "lucide-react";
 import { Button } from "../ui/button";
-import Link from "next/link";
-// Import useState and useRef from React
 import { useState, useRef } from "react";
+import { useTranslations } from "next-intl"; // Import the hook
+import { Link } from "@/i18n/navigation";
 
 export const HowItWorksSection = () => {
+  const t = useTranslations("HowItWorksSection"); // Initialize the hook
   const [isPlaying, setIsPlaying] = useState(false);
-
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlayClick = () => {
@@ -16,6 +18,22 @@ export const HowItWorksSection = () => {
       setIsPlaying(true);
     }
   };
+
+  // Build the steps list from translations
+  const steps = [
+    {
+      title: t("steps.0.title"),
+      description: t("steps.0.description"),
+    },
+    {
+      title: t("steps.1.title"),
+      description: t("steps.1.description"),
+    },
+    {
+      title: t("steps.2.title"),
+      description: t("steps.2.description"),
+    },
+  ];
 
   return (
     <section
@@ -31,59 +49,32 @@ export const HowItWorksSection = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold mb-6 text-primary-text">
-              Cara Kerja <span className="text-accent-background">AmanAja</span>
+              {t.rich("title", {
+                accent: (chunks) => (
+                  <span className="text-accent-background">{chunks}</span>
+                ),
+              })}
             </h2>
             <p className="text-lg leading-relaxed mb-6 text-secondary-text">
-              AmanAja bekerja dengan 3 langkah sederhana: Kirim pesan
-              mencurigakan ke WhatsApp kami, AI kami akan menganalisis konten
-              dan pola penipuan, lalu Anda menerima hasil analisis dengan
-              rekomendasi tindakan dalam hitungan detik.
+              {t("subtitle")}
             </p>
 
             <div className="space-y-4 mb-8">
-              {/* Step numbers... (code unchanged) */}
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5 bg-accent-background text-inverse-text">
-                  1
+              {steps.map((step, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5 bg-accent-background text-inverse-text">
+                    {index + 1}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1 text-primary-text">
+                      {step.title}
+                    </h4>
+                    <p className="text-sm text-secondary-text">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold mb-1 text-primary-text">
-                    Kirim Pesan
-                  </h4>
-                  <p className="text-sm text-secondary-text">
-                    Forward pesan mencurigakan ke WhatsApp AmanAja atau kirim
-                    screenshot
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5 bg-accent-background text-inverse-text">
-                  2
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1 text-primary-text">
-                    AI Analisis
-                  </h4>
-                  <p className="text-sm text-secondary-text">
-                    Sistem AI menganalisis konten dan membandingkan dengan
-                    database penipuan
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5 bg-accent-background text-inverse-text">
-                  3
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1 text-primary-text">
-                    Terima Hasil
-                  </h4>
-                  <p className="text-sm text-secondary-text">
-                    Dapatkan hasil analisis dengan tingkat risiko dan
-                    rekomendasi tindakan
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
 
             <motion.div
@@ -98,7 +89,7 @@ export const HowItWorksSection = () => {
                   variant="outline"
                   className="px-8 py-4 text-lg transition-all duration-200 bg-transparent hover:bg-accent-background/10 border text-accent-background border-accent-background"
                 >
-                  Pelajari Lebih Lanjut
+                  {t("cta_learnMore")}
                   <ChevronRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
@@ -142,7 +133,6 @@ export const HowItWorksSection = () => {
                     type="video/mp4"
                     media="(min-width: 768px)"
                   />
-
                   <source
                     src="/video/demo-mobile.mp4"
                     type="video/mp4"
@@ -152,11 +142,10 @@ export const HowItWorksSection = () => {
               </div>
               <div className="mt-6">
                 <h3 className="text-xl font-semibold mb-2 text-primary-text">
-                  Lihat Demo AmanAja
+                  {t("video_title")}
                 </h3>
                 <p className="text-sm text-secondary-text">
-                  Tonton bagaimana AmanAja mendeteksi dan mencegah berbagai
-                  jenis penipuan digital secara real-time
+                  {t("video_description")}
                 </p>
               </div>
             </div>

@@ -1,0 +1,281 @@
+{
+  "Header": {
+    "nav": {
+      "about": "Tentang Kami",
+      "howItWorks": "Cara Ia Berfungsi",
+      "faq": "Soalan Lazim"
+    },
+    "themeToggle": {
+      "light": "Cerah",
+      "dark": "Gelap"
+    },
+    "LanguageSwitcher": {
+      "indonesian": "Bahasa Indonesia",
+      "english": "English",
+      "malay": "Bahasa Melayu",
+      "vietnamese": "Tiếng Việt",
+      "thai": "ภาษาไทย",
+      "tagalog": "Tagalog"
+    }
+  },
+  "HeroSection": {
+    "title": "Lindungi Diri Anda daripada <accent>Penipuan Digital</accent> dengan AI",
+    "subtitle": "AmanAja menggunakan kecerdasan buatan untuk mengesan dan mencegah penipuan digital dalam masa nyata. Mudah digunakan, tepat, dan boleh dipercayai.",
+    "cta_whatsapp": "Sembang di WhatsApp",
+    "cta_demo": "Tonton Demo"
+  },
+  "FeatureSection": {
+    "title": "Mengapa Pilih <accent>AmanAja</accent>?",
+    "subtitle": "Ciri-ciri cemerlang yang menjadikan AmanAja pilihan terbaik untuk perlindungan digital anda.",
+    "cta_about": "Tentang Kami",
+    "features": [
+      {
+        "title": "Penyimpanan Mesej",
+        "description": "Mesej WhatsApp anda disimpan sementara untuk analisis AI dan akan dipadamkan secara automatik selepas analisis selesai."
+      },
+      {
+        "title": "Akses Terhad",
+        "description": "Akses kepada pangkalan data tidak boleh dilakukan oleh pembangun atau pentadbir."
+      },
+      {
+        "title": "Penggunaan Data",
+        "description": "Data tidak digunakan untuk tujuan selain daripada konteks dan analisis sentimen."
+      }
+    ]
+  },
+  "HowItWorksSection": {
+    "title": "Cara <accent>AmanAja</accent> Berfungsi",
+    "subtitle": "AmanAja berfungsi dalam 3 langkah mudah: Hantar mesej yang mencurigakan ke WhatsApp kami, AI kami akan menganalisis kandungan dan corak penipuan, kemudian anda menerima keputusan analisis dengan tindakan yang disyorkan dalam beberapa saat.",
+    "steps": [
+      {
+        "title": "Hantar Mesej",
+        "description": "Hantarkan mesej yang mencurigakan ke WhatsApp AmanAja atau hantar tangkapan skrin."
+      },
+      {
+        "title": "Analisis AI",
+        "description": "Sistem AI menganalisis kandungan dan membandingkannya dengan pangkalan data penipuan."
+      },
+      {
+        "title": "Terima Keputusan",
+        "description": "Dapatkan keputusan analisis dengan tahap risiko dan tindakan yang disyorkan."
+      }
+    ],
+    "cta_learnMore": "Ketahui Lebih Lanjut",
+    "video_title": "Tonton Demo AmanAja",
+    "video_description": "Lihat bagaimana AmanAja mengesan dan mencegah pelbagai jenis penipuan digital dalam masa nyata."
+  },
+  "CTASection": {
+    "title": "Bersedia untuk Melindungi Diri Anda?",
+    "subtitle": "Sertai beribu-ribu pengguna yang sudah mengalami keselamatan berlapis AmanAja. Mula melindungi diri anda hari ini!",
+    "cta_chat": "Mula Sembang Sekarang",
+    "cta_demo": "Tonton Demo"
+  },
+  "FAQSection": {
+    "title": "Soalan <accent>Lazim</accent>",
+    "subtitle": "Jawapan kepada soalan lazim mengenai AmanAja",
+    "questions": [
+      {
+        "question": "Adakah AmanAja percuma?",
+        "answer": "Ya, AmanAja pada masa ini boleh diakses oleh semua orang dan adalah percuma."
+      },
+      {
+        "question": "Bagaimanakah AI AmanAja berfungsi?",
+        "answer": "AmanAja menggunakan AI dengan Gemini, yang ditala halus untuk keperluan pengesanan penipuan."
+      },
+      {
+        "question": "Adakah data saya selamat?",
+        "answer": "Selamat. Kami tidak menyimpan data peribadi anda. Data yang digunakan sebelum ini hanya disimpan sebagai konteks kecil untuk pengesanan seterusnya."
+      },
+      {
+        "question": "Berapa lama masa analisis diambil?",
+        "answer": "Analisis boleh diselesaikan dalam purata 1 minit."
+      },
+      {
+        "question": "Bolehkah AmanAja mengesan semua jenis penipuan?",
+        "answer": "AmanAja boleh mengesan pelbagai jenis penipuan digital termasuk pancingan data, penipuan hadiah, penipuan pelaburan, dan sebagainya."
+      }
+    ]
+  },
+  "Footer": {
+    "tagline": "Platform Pengesanan Penipuan AI",
+    "description": "Melindungi rakyat Indonesia daripada penipuan digital dengan teknologi AI terkemuka. Bersama-sama, kita cipta internet yang lebih selamat.",
+    "cta_chat": "Mula Sembang",
+    "copyright": "© 2025 AmanAja. Hak cipta terpelihara."
+  },
+  "AboutPage": {
+    "header": {
+      "back": "Kembali",
+      "title": "Tentang AmanAja",
+      "badge": "Ditubuhkan 2022"
+    },
+    "hero": {
+      "title": "Melindungi Indonesia daripada <accent>Penipuan Digital</accent>",
+      "subtitle": "AmanAja lahir daripada kebimbangan mendalam tentang peningkatan kes penipuan digital di Indonesia. Kami percaya teknologi AI boleh menjadi barisan hadapan dalam melindungi orang ramai daripada ancaman jenayah siber.",
+      "stats": {
+        "users": "Pengguna Dilindungi",
+        "scams": "Penipuan Disekat",
+        "accuracy": "Ketepatan AI",
+        "monitoring": "Pemantauan"
+      }
+    },
+    "mission": {
+      "title": "Misi Kami",
+      "description": "Untuk mencipta teknologi AI yang boleh digunakan oleh orang awam supaya dengan AI ini, kami berharap orang ramai, baik yang celik teknologi mahupun tidak, dapat mengelakkan semua kes penipuan yang berlaku di dunia digital.",
+      "points": [
+        "Kurangkan kadar kejayaan penipuan melalui platform sekurang-kurangnya 30%",
+        "Proses laporan secara besar-besaran, sekurang-kurangnya 15,000 laporan sebulan",
+        "Kenal pasti entiti haram baru melalui nombor telefon dan akaun mereka",
+        "Sediakan akses mudah untuk mengesahkan akaun bank atau nombor telefon"
+      ]
+    },
+    "values": {
+      "title": "Nilai-Nilai Kami",
+      "subtitle": "Prinsip-prinsip yang membimbing setiap keputusan dan tindakan kami",
+      "items": {
+        "security": {
+          "title": "Keselamatan Diutamakan",
+          "description": "Kami meletakkan keselamatan dan privasi pengguna sebagai keutamaan kami."
+        },
+        "socialImpact": {
+          "title": "Kesan Sosial",
+          "description": "Kami komited untuk mewujudkan internet yang selamat untuk semua, terutamanya kumpulan yang terdedah seperti warga emas."
+        },
+        "innovation": {
+          "title": "Inovasi Berterusan",
+          "description": "Sentiasa berinovasi dengan teknologi untuk menghadapi evolusi ancaman siber."
+        },
+        "community": {
+          "title": "Komuniti Diutamakan",
+          "description": "Membina penyelesaian bersama komuniti dengan mendengar maklum balas dan keperluan pengguna."
+        }
+      }
+    },
+    "team": {
+      "title": "Pasukan Pakar Kami",
+      "subtitle": "Diterajui oleh pakar berpengalaman dari syarikat teknologi terkemuka dunia.",
+      "expertise": "Kepakaran",
+      "education": "Pendidikan",
+      "achievements": "Pencapaian Utama",
+      "members": [
+        {
+          "name": "Rizqi Andhika",
+          "role": "Hustler",
+          "expertise": "Pakar Perniagaan",
+          "education": "Institut Teknologi Bandung",
+          "description": "Seorang penganalisis perniagaan dan hustler yang mahir.",
+          "achievements": ["Pemilik syarikat barangan permainan", "PNG 4.0"]
+        },
+        {
+          "name": "Muhammad Akmal Ramadhan",
+          "role": "Hacker",
+          "expertise": "Pakar AI dan ML",
+          "education": "Institut Teknologi Bandung",
+          "description": "Seorang pengamal Pembelajaran Mesin dan AI yang telah memenangi beberapa kejuaraan.",
+          "achievements": ["Pemenang Pertandingan Sains Data", "Projek Terbaik dalam Lawatan Jepun"]
+        },
+        {
+          "name": "Valentino Chryslie Triadi",
+          "role": "Hacker",
+          "expertise": "Pakar DevOps dan Data",
+          "education": "Institut Teknologi Bandung",
+          "description": "Seorang Jurutera Perisian yang pakar dalam bidang DevOps dan sistem.",
+          "achievements": ["Ketua jawatankuasa IT untuk acara di ITB", "PNG 4.0"]
+        },
+        {
+          "name": "Muhammad Davis Adhipramana",
+          "role": "Hipster",
+          "expertise": "Pembangun Frontend",
+          "education": "Institut Teknologi Bandung",
+          "description": "Seorang Pembangun Permainan dan Jurutera Perisian dengan tumpuan pada visual.",
+          "achievements": ["Pemenang Hackathon Perniagaan", "Naib Johan Pertandingan GameDev"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Sertai Misi Kami",
+      "subtitle": "Marilah kita bekerjasama untuk mencipta internet yang lebih selamat untuk semua.",
+      "button_protect": "Mula Melindungi Diri",
+      "button_home": "Kembali ke Laman Utama"
+    }
+  },
+  "HowItWorksPage": {
+    "header": {
+      "back": "Kembali",
+      "title": "Cara AmanAja Berfungsi",
+      "lightMode": "Cerah",
+      "darkMode": "Gelap"
+    },
+    "hero": {
+      "title": "Teknologi AI yang <accent>Mudah Digunakan</accent>",
+      "subtitle": "Ketahui bagaimana AmanAja menggunakan kecerdasan buatan terkemuka untuk melindungi anda daripada penipuan digital dengan proses yang mudah dan pantas."
+    },
+    "detailedSteps": {
+      "title": "Proses Analisis AI Terperinci",
+      "subtitle": "Setiap langkah direka untuk memberikan hasil yang tepat dan boleh dipercayai.",
+      "stepLabel": "Langkah",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Hantar Mesej",
+          "subtitle": "Input & Pengumpulan Data",
+          "description": "Hantarkan mesej yang mencurigakan ke nombor WhatsApp AmanAja atau ambil tangkapan skrin dan hantar imej.",
+          "process": [
+            "Pengguna menghantar mesej ke WhatsApp AmanAja",
+            "Sistem menerima dan mengesahkan input",
+            "Data ditukar kepada format Vektor",
+            "Data yang diproses melalui OCR disimpan dalam tika QDrant masing-masing"
+          ]
+        },
+        {
+          "step": "2",
+          "title": "Analisis AI",
+          "subtitle": "Pemprosesan Pembelajaran Mesin",
+          "description": "Sistem AI menganalisis kandungan, corak, dan membandingkannya dengan pangkalan data penipuan terkini.",
+          "process": [
+            "Pra-pemprosesan teks dan tokenisasi",
+            "Pengekstrakan ciri daripada kandungan",
+            "Menggunakan Model Gemini yang ditala halus untuk hasil",
+            "Analisis Sentimen",
+            "Menyimpan dalam RAG sebagai token"
+          ]
+        },
+        {
+          "step": "3",
+          "title": "Terima Keputusan",
+          "subtitle": "Keputusan & Cadangan",
+          "description": "Dapatkan keputusan analisis lengkap dengan tahap risiko dan tindakan yang disyorkan dalam beberapa saat.",
+          "process": [
+            "Keputusan dihantar kepada pengguna",
+            "Pengguna akan diberikan tahap keyakinan",
+            "Pengguna juga akan diberikan ringkasan",
+            "Memulakan semula proses input dari awal"
+          ]
+        }
+      ]
+    },
+    "security": {
+      "title": "Keselamatan & Privasi Terjamin",
+      "subtitle": "Piawaian keselamatan perusahaan untuk melindungi data dan privasi anda.",
+      "items": [
+        {
+          "title": "Penyimpanan Mesej",
+          "description": "Mesej WhatsApp anda disimpan sementara untuk analisis AI dan akan dipadamkan secara automatik selepas analisis selesai."
+        },
+        {
+          "title": "Akses Terhad",
+          "description": "Akses kepada pangkalan data tidak boleh dilakukan oleh pembangun atau pentadbir."
+        },
+        {
+          "title": "Penggunaan Data",
+          "description": "Data tidak digunakan untuk tujuan selain daripada konteks dan analisis sentimen."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bersedia untuk Mencuba Teknologi AI Ini?",
+      "subtitle": "Alami sendiri kelajuan dan ketepatan sistem AI AmanAja dalam melindungi anda.",
+      "button_try": "Cuba Sekarang",
+      "button_home": "Kembali ke Laman Utama"
+    }
+  }
+}

@@ -1,10 +1,15 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { MessageCircle, Play } from "lucide-react";
-import Link from "next/link";
 import { phoneLinks } from "@/constant/content";
+import { useTranslations } from "next-intl"; // Import the hook
+import { Link } from "@/i18n/navigation";
 
 export const CTASection = () => {
+  const t = useTranslations("CTASection"); // Initialize the hook
+
   return (
     <motion.section
       className="py-20 px-4 sm:px-6 lg:px-8 bg-accent-background"
@@ -21,7 +26,7 @@ export const CTASection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Siap Melindungi Diri Anda?
+          {t("title")}
         </motion.h2>
         <motion.p
           className="text-xl mb-12 leading-relaxed opacity-80 text-primary-background"
@@ -30,8 +35,7 @@ export const CTASection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Bergabung dengan ribuan pengguna yang sudah merasakan keamanan
-          berlapis dari AmanAja. Mulai lindungi diri Anda hari ini juga!
+          {t("subtitle")}
         </motion.p>
         <motion.div
           className="flex flex-col sm:flex-row gap-6 justify-center"
@@ -51,7 +55,7 @@ export const CTASection = () => {
                 className="px-10 py-4 text-lg transition-all duration-200 hover:shadow-lg bg-primary-background hover:bg-primary-background/90 text-accent-background dark:hover:text-white"
               >
                 <MessageCircle className="w-6 h-6 mr-3" />
-                Mulai Chat Sekarang
+                {t("cta_chat")}
               </Button>
             </Link>
           </motion.div>
@@ -60,11 +64,10 @@ export const CTASection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 px-10 py-4 text-lg bg-transparent transition-all duration-200 !border-primary-background text-white dark:text-black dark:hover:text-white dark:hover:bg-primary-background !hover:border-white
-                "
+                className="border-2 px-10 py-4 text-lg bg-transparent transition-all duration-200 !border-primary-background text-white dark:text-black dark:hover:text-white dark:hover:bg-primary-background !hover:border-white"
               >
                 <Play className="w-6 h-6 mr-3" />
-                Lihat Demo
+                {t("cta_demo")}
               </Button>
             </Link>
           </motion.div>

@@ -1,6 +1,8 @@
+"use client"
 import { fadeInUp, staggerContainer } from "@/constant/style.constant";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 const AnimatedFAQItem = ({
@@ -53,6 +55,13 @@ const AnimatedFAQItem = ({
 };
 
 export const FAQSection = () => {
+  const t = useTranslations("FAQSection");
+
+  const faqs = [0, 1, 2, 3, 4].map(index => ({
+    question: t(`questions.${index}.question`),
+    answer: t(`questions.${index}.answer`),
+  }));
+
   return (
     <section
       className="py-20 xl:py-30 px-4 sm:px-6 lg:px-8 bg-primary-background"
@@ -67,10 +76,13 @@ export const FAQSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl font-bold mb-6 text-primary-text">
-            Pertanyaan <span className="text-accent-background">Umum</span>
+            {/* Use t.rich to handle the <span> tag for styling */}
+            {t.rich("title", {
+              accent: (chunks) => <span className="text-accent-background">{chunks}</span>,
+            })}
           </h2>
           <p className="text-lg text-secondary-text">
-            Jawaban untuk pertanyaan yang sering diajukan tentang AmanAja
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -81,33 +93,7 @@ export const FAQSection = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          {[
-            {
-              question: "Apakah AmanAja gratis?",
-              answer:
-                "Ya, AmanAja untuk saat ini dapat diakses oleh siapa saja dan bersifat gratis",
-            },
-            {
-              question: "Bagaimana cara kerja AI AmanAja?",
-              answer:
-                "Aman Aja menggunakan AI dengan Gemini yang di fine-tune untuk kebutuhan fraud detection",
-            },
-            {
-              question: "Apakah data saya aman?",
-              answer:
-                "Aman. Kami tidak menyimpan data pribadi anda. Data yang sebelumnya digunakan hanya disimpan sebagai sedikit context untuk deteksi berikutnya",
-            },
-            {
-              question: "Berapa lama waktu analisis?",
-              answer: "Analisis dapat dilakukan dalam waktu rata-rata 1 menit",
-            },
-            {
-              question:
-                "Apakah Aman Aja dapat mendeteksi semua jenis penipuan?",
-              answer:
-                "Aman Aja dapat mendeteksi berbagai jenis penipuan digital termasuk phising, scam hadiah, penipuan investasi, dan sebagainya",
-            },
-          ].map((faq, index) => (
+          {faqs.map((faq, index) => (
             <AnimatedFAQItem key={index} faq={faq} index={index} />
           ))}
         </motion.div>

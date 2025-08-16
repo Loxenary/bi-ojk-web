@@ -1,0 +1,281 @@
+{
+  "Header": {
+    "nav": {
+      "about": "Tungkol sa Amin",
+      "howItWorks": "Paano Ito Gumagana",
+      "faq": "Mga Madalas Itanong"
+    },
+    "themeToggle": {
+      "light": "Maliwanag",
+      "dark": "Madilim"
+    },
+    "LanguageSwitcher": {
+      "indonesian": "Indonesian",
+      "english": "Ingles",
+      "malay": "Malay",
+      "vietnamese": "Vietnamese",
+      "thai": "Thai",
+      "tagalog": "Tagalog"
+    }
+  },
+  "HeroSection": {
+    "title": "Protektahan ang Iyong Sarili mula sa <accent>Digital Scams</accent> gamit ang AI",
+    "subtitle": "Ginagamit ng AmanAja ang artificial intelligence upang matukoy at maiwasan ang digital na pandaraya sa real-time. Madaling gamitin, tumpak, at maaasahan.",
+    "cta_whatsapp": "Makipag-chat sa WhatsApp",
+    "cta_demo": "Panoorin ang Demo"
+  },
+  "FeatureSection": {
+    "title": "Bakit Pumili ng <accent>AmanAja</accent>?",
+    "subtitle": "Napakahusay na mga tampok na ginagawang pinakamahusay na pagpipilian ang AmanAja para sa iyong digital na proteksyon.",
+    "cta_about": "Tungkol sa Amin",
+    "features": [
+      {
+        "title": "Imbakan ng Mensahe",
+        "description": "Ang iyong mga mensahe sa WhatsApp ay pansamantalang iniimbak para sa pagsusuri ng AI at awtomatikong tatanggalin pagkatapos makumpleto ang pagsusuri."
+      },
+      {
+        "title": "Limitadong Pag-access",
+        "description": "Ang pag-access sa database ay hindi maaaring isagawa ng mga developer o administrator."
+      },
+      {
+        "title": "Paggamit ng Datos",
+        "description": "Ang datos ay hindi ginagamit para sa mga layunin maliban sa konteksto at pagsusuri ng sentimyento."
+      }
+    ]
+  },
+  "HowItWorksSection": {
+    "title": "Paano Gumagana ang <accent>AmanAja</accent>",
+    "subtitle": "Gumagana ang AmanAja sa 3 simpleng hakbang: Magpadala ng mga kahina-hinalang mensahe sa aming WhatsApp, susuriin ng aming AI ang nilalaman at mga pattern ng pandaraya, pagkatapos ay matatanggap mo ang mga resulta ng pagsusuri na may mga inirekumendang aksyon sa loob ng ilang segundo.",
+    "steps": [
+      {
+        "title": "Magpadala ng Mensahe",
+        "description": "Ipasa ang mga kahina-hinalang mensahe sa WhatsApp ng AmanAja o magpadala ng screenshot."
+      },
+      {
+        "title": "Pagsusuri ng AI",
+        "description": "Sinusuri ng sistema ng AI ang nilalaman at inihahambing ito sa database ng pandaraya."
+      },
+      {
+        "title": "Makatanggap ng mga Resulta",
+        "description": "Kumuha ng mga resulta ng pagsusuri na may mga antas ng panganib at inirekumendang aksyon."
+      }
+    ],
+    "cta_learnMore": "Matuto Nang Higit Pa",
+    "video_title": "Panoorin ang Demo ng AmanAja",
+    "video_description": "Tingnan kung paano natutukoy at pinipigilan ng AmanAja ang iba't ibang uri ng digital na pandaraya sa real-time."
+  },
+  "CTASection": {
+    "title": "Handa nang Protektahan ang Iyong Sarili?",
+    "subtitle": "Sumali sa libu-libong mga gumagamit na nakakaranas na ng layered na seguridad ng AmanAja. Simulan ang pagprotekta sa iyong sarili ngayon!",
+    "cta_chat": "Simulan ang Pakikipag-chat Ngayon",
+    "cta_demo": "Panoorin ang Demo"
+  },
+  "FAQSection": {
+    "title": "Mga Madalas <accent>Itanong</accent>",
+    "subtitle": "Mga sagot sa mga madalas itanong tungkol sa AmanAja",
+    "questions": [
+      {
+        "question": "Libre ba ang AmanAja?",
+        "answer": "Oo, kasalukuyang magagamit ng lahat ang AmanAja at libre ito."
+      },
+      {
+        "question": "Paano gumagana ang AI ng AmanAja?",
+        "answer": "Ginagamit ng AmanAja ang AI sa Gemini, na pinino para sa mga pangangailangan sa pagtuklas ng pandaraya."
+      },
+      {
+        "question": "Ligtas ba ang aking data?",
+        "answer": "Ligtas. Hindi namin iniimbak ang iyong personal na data. Ang dating ginamit na data ay iniimbak lamang bilang isang maliit na konteksto para sa susunod na pagtuklas."
+      },
+      {
+        "question": "Gaano katagal ang pagsusuri?",
+        "answer": "Maaaring makumpleto ang pagsusuri sa average na 1 minuto."
+      },
+      {
+        "question": "Maaari bang matukoy ng AmanAja ang lahat ng uri ng pandaraya?",
+        "answer": "Maaaring matukoy ng AmanAja ang iba't ibang uri ng digital na pandaraya kabilang ang phishing, mga scam sa premyo, mga scam sa pamumuhunan, at iba pa."
+      }
+    ]
+  },
+  "Footer": {
+    "tagline": "Platform ng Pagtuklas ng Pandaraya sa AI",
+    "description": "Pinoprotektahan ang mga taga-Indonesia mula sa digital na pandaraya gamit ang nangungunang teknolohiya ng AI. Sama-sama, lumikha tayo ng isang mas ligtas na internet.",
+    "cta_chat": "Simulan ang Pakikipag-chat",
+    "copyright": "© 2025 AmanAja. Nakalaan ang lahat ng mga karapatan."
+  },
+  "AboutPage": {
+    "header": {
+      "back": "Bumalik",
+      "title": "Tungkol sa AmanAja",
+      "badge": "Itinatag 2022"
+    },
+    "hero": {
+      "title": "Pinoprotektahan ang Indonesia mula sa <accent>Digital na Pandaraya</accent>",
+      "subtitle": "Isinilang ang AmanAja mula sa malalim na pag-aalala tungkol sa pagtaas ng mga kaso ng digital na pandaraya sa Indonesia. Naniniwala kami na ang teknolohiya ng AI ay maaaring maging frontline sa pagprotekta sa publiko mula sa banta ng cybercrime.",
+      "stats": {
+        "users": "Mga Protektadong Gumagamit",
+        "scams": "Mga Na-block na Scam",
+        "accuracy": "Katumpakan ng AI",
+        "monitoring": "Pagsubaybay"
+      }
+    },
+    "mission": {
+      "title": "Ang Aming Misyon",
+      "description": "Upang lumikha ng isang teknolohiya ng AI na maaaring magamit ng pangkalahatang publiko upang sa pamamagitan ng AI na ito, umaasa kami na ang mga tao, parehong mga tech-savvy at hindi, ay maiiwasan ang lahat ng mga kaso ng pandaraya na nangyayari sa digital na mundo.",
+      "points": [
+        "Bawasan ang rate ng tagumpay ng pandaraya sa pamamagitan ng platform ng hindi bababa sa 30%",
+        "Magproseso ng mga ulat sa malaking sukat, hindi bababa sa 15,000 ulat bawat buwan",
+        "Tukuyin ang mga bagong ilegal na entity sa pamamagitan ng kanilang mga numero ng telepono at account",
+        "Magbigay ng madaling pag-access upang i-verify ang mga bank account o numero ng telepono"
+      ]
+    },
+    "values": {
+      "title": "Ang Aming mga Halaga",
+      "subtitle": "Ang mga prinsipyo na gumagabay sa bawat desisyon at aksyon namin",
+      "items": {
+        "security": {
+          "title": "Seguridad Muna",
+          "description": "Inilalagay namin ang seguridad at privacy ng gumagamit bilang aming pangunahing priyoridad."
+        },
+        "socialImpact": {
+          "title": "Epekto sa Lipunan",
+          "description": "Nakatuon kami sa paglikha ng isang ligtas na internet para sa lahat, lalo na sa mga mahihinang grupo tulad ng mga matatanda."
+        },
+        "innovation": {
+          "title": "Patuloy na Pagbabago",
+          "description": "Patuloy na nagbabago sa teknolohiya upang harapin ang ebolusyon ng mga banta sa cyber."
+        },
+        "community": {
+          "title": "Komunidad Muna",
+          "description": "Pagbuo ng mga solusyon kasama ang komunidad sa pamamagitan ng pakikinig sa feedback at mga pangangailangan ng gumagamit."
+        }
+      }
+    },
+    "team": {
+      "title": "Ang Aming Koponan ng mga Eksperto",
+      "subtitle": "Pinamumunuan ng mga may karanasang eksperto mula sa mga nangungunang kumpanya ng teknolohiya sa mundo.",
+      "expertise": "Kadubhasaan",
+      "education": "Edukasyon",
+      "achievements": "Mga Pangunahing Nakamit",
+      "members": [
+        {
+          "name": "Rizqi Andhika",
+          "role": "Hustler",
+          "expertise": "Eksperto sa Negosyo",
+          "education": "Bandung Institute of Technology",
+          "description": "Isang mahusay na business analyst at hustler.",
+          "achievements": ["May-ari ng isang kumpanya ng merchandise ng laro", "GPA 4.0"]
+        },
+        {
+          "name": "Muhammad Akmal Ramadhan",
+          "role": "Hacker",
+          "expertise": "Eksperto sa AI at ML",
+          "education": "Bandung Institute of Technology",
+          "description": "Isang Machine Learning at AI practitioner na nanalo ng ilang mga kampeonato.",
+          "achievements": ["Nagwagi ng Kumpetisyon sa Agham ng Datos", "Pinakamahusay na Proyekto sa Paglalakbay sa Japan"]
+        },
+        {
+          "name": "Valentino Chryslie Triadi",
+          "role": "Hacker",
+          "expertise": "Eksperto sa DevOps at Datos",
+          "education": "Bandung Institute of Technology",
+          "description": "Isang Software Engineer na eksperto sa larangan ng DevOps at mga sistema.",
+          "achievements": ["Pinuno ng komite ng IT para sa isang kaganapan sa ITB", "GPA 4.0"]
+        },
+        {
+          "name": "Muhammad Davis Adhipramana",
+          "role": "Hipster",
+          "expertise": "Frontend Developer",
+          "education": "Bandung Institute of Technology",
+          "description": "Isang Game Developer at Software Engineer na may pagtuon sa mga visual.",
+          "achievements": ["Nagwagi ng Business Hackathon", "Runner-up ng Kumpetisyon sa GameDev"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Sumali sa Aming Misyon",
+      "subtitle": "Sama-sama tayong lumikha ng isang mas ligtas na internet para sa lahat.",
+      "button_protect": "Simulan ang Pagprotekta sa Iyong Sarili",
+      "button_home": "Bumalik sa Home"
+    }
+  },
+  "HowItWorksPage": {
+    "header": {
+      "back": "Bumalik",
+      "title": "Paano Gumagana ang AmanAja",
+      "lightMode": "Maliwanag",
+      "darkMode": "Madilim"
+    },
+    "hero": {
+      "title": "Teknolohiya ng AI na <accent>Madaling Gamitin</accent>",
+      "subtitle": "Alamin kung paano ginagamit ng AmanAja ang nangungunang artificial intelligence upang protektahan ka mula sa digital na pandaraya sa isang simple at mabilis na proseso."
+    },
+    "detailedSteps": {
+      "title": "Detalyadong Proseso ng Pagsusuri ng AI",
+      "subtitle": "Ang bawat hakbang ay idinisenyo upang magbigay ng tumpak at maaasahang mga resulta.",
+      "stepLabel": "Hakbang",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Magpadala ng Mensahe",
+          "subtitle": "Input at Pagkolekta ng Datos",
+          "description": "Ipasa ang mga kahina-hinalang mensahe sa numero ng WhatsApp ng AmanAja o kumuha ng screenshot at ipadala ang larawan.",
+          "process": [
+            "Nagpapadala ang gumagamit ng mensahe sa WhatsApp ng AmanAja",
+            "Tinatanggap at binibigyang-bisa ng system ang input",
+            "Ang datos ay ginawang format na Vector",
+            "Ang datos na naproseso sa pamamagitan ng OCR ay iniimbak sa kani-kanilang mga pagkakataon ng QDrant"
+          ]
+        },
+        {
+          "step": "2",
+          "title": "Pagsusuri ng AI",
+          "subtitle": "Pagproseso ng Machine Learning",
+          "description": "Sinusuri ng sistema ng AI ang nilalaman, mga pattern, at inihahambing ito sa pinakabagong database ng pandaraya.",
+          "process": [
+            "Preprocessing ng teksto at tokenization",
+            "Pagkuha ng tampok mula sa nilalaman",
+            "Paggamit ng isang pinong-tono na Gemini Model para sa mga resulta",
+            "Pagsusuri ng Sentimyento",
+            "Pag-iimbak sa RAG bilang isang token"
+          ]
+        },
+        {
+          "step": "3",
+          "title": "Makatanggap ng mga Resulta",
+          "subtitle": "Resulta at Rekomendasyon",
+          "description": "Kumuha ng isang kumpletong resulta ng pagsusuri na may antas ng panganib at inirekumendang aksyon sa loob ng ilang segundo.",
+          "process": [
+            "Ang mga resulta ay ipinadala sa gumagamit",
+            "Ang gumagamit ay bibigyan ng isang antas ng kumpiyansa",
+            "Ang gumagamit ay bibigyan din ng isang buod",
+            "Pag-restart ng proseso ng pag-input mula sa simula"
+          ]
+        }
+      ]
+    },
+    "security": {
+      "title": "Garantisadong Seguridad at Privacy",
+      "subtitle": "Mga pamantayan sa seguridad ng enterprise upang protektahan ang iyong data at privacy.",
+      "items": [
+        {
+          "title": "Imbakan ng Mensahe",
+          "description": "Ang iyong mga mensahe sa WhatsApp ay pansamantalang iniimbak para sa pagsusuri ng AI at awtomatikong tatanggalin pagkatapos makumpleto ang pagsusuri."
+        },
+        {
+          "title": "Limitadong Pag-access",
+          "description": "Ang pag-access sa database ay hindi maaaring isagawa ng mga developer o administrator."
+        },
+        {
+          "title": "Paggamit ng Datos",
+          "description": "Ang datos ay hindi ginagamit para sa mga layunin maliban sa konteksto at pagsusuri ng sentimyento."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Handa nang Subukan ang Teknolohiyang AI na Ito?",
+      "subtitle": "Damhin ang bilis at katumpakan ng sistema ng AI ng AmanAja sa pagprotekta sa iyo nang personal.",
+      "button_try": "Subukan Ngayon",
+      "button_home": "Bumalik sa Home"
+    }
+  }
+}

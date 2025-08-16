@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "../ui/button";
@@ -8,16 +10,19 @@ import {
   staggerContainer,
 } from "@/constant/style.constant";
 import Image from "next/image";
-import Link from "next/link";
 import { phoneLinks } from "@/constant/content";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 const IMAGES = {
   hero_image: "/images/contoh_penipuan.jpg",
 };
 
 export const HeroSection = () => {
+  const t = useTranslations("HeroSection"); // Initialize the hook
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true, margin: "-100px" });
+
   return (
     <section
       ref={heroRef}
@@ -41,21 +46,26 @@ export const HeroSection = () => {
                 }
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <span className="text-primary-text">Lindungi Diri dari </span>
-                <motion.span
-                  className="text-accent-background"
-                  animate={{
-                    textShadow: [
-                      "0 0 0px rgba(53, 84, 231, 0)",
-                      "0 0 20px rgba(53, 84, 231, 0.3)",
-                      "0 0 0px rgba(53, 84, 231, 0)",
-                    ],
-                  }}
-                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                >
-                  Penipuan Digital
-                </motion.span>
-                <span className="text-primary-text"> dengan AI</span>
+                {/* Use t.rich to handle the nested span */}
+                <span className="text-primary-text">
+                  {t.rich("title", {
+                    accent: (chunks) => (
+                      <motion.span
+                        className="text-accent-background"
+                        animate={{
+                          textShadow: [
+                            "0 0 0px rgba(53, 84, 231, 0)",
+                            "0 0 20px rgba(53, 84, 231, 0.3)",
+                            "0 0 0px rgba(53, 84, 231, 0)",
+                          ],
+                        }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      >
+                        {chunks}
+                      </motion.span>
+                    ),
+                  })}
+                </span>
               </motion.h1>
               <motion.p
                 className="text-lg leading-relaxed text-secondary-text"
@@ -65,9 +75,7 @@ export const HeroSection = () => {
                 }
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                AmanAja menggunakan kecerdasan buatan untuk mendeteksi dan
-                mencegah penipuan digital secara real-time. Mudah digunakan,
-                akurat, dan terpercaya.
+                {t("subtitle")}
               </motion.p>
             </motion.div>
 
@@ -90,7 +98,7 @@ export const HeroSection = () => {
                     className="px-8 py-4 text-lg transition-all duration-200 hover:shadow-lg bg-accent-background hover:bg-accent-background/90 text-inverse-text"
                   >
                     <MessageCircle className="w-6 h-6 mr-3" />
-                    Chat di WhatsApp
+                    {t("cta_whatsapp")}
                   </Button>
                 </Link>
               </motion.div>
@@ -105,7 +113,7 @@ export const HeroSection = () => {
                     className="px-8 py-4 text-lg transition-all duration-200 bg-transparent border-primary-border text-primary-text"
                   >
                     <Play className="w-6 h-6 mr-3" />
-                    Lihat Demo
+                    {t("cta_demo")}
                   </Button>
                 </Link>
               </motion.div>
@@ -139,7 +147,7 @@ export const HeroSection = () => {
                 }}
                 transition={{
                   duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
+                  repeat: Infinity,
                   ease: "easeInOut",
                 }}
                 whileHover={{ scale: 1.1 }}
@@ -154,7 +162,7 @@ export const HeroSection = () => {
                 }}
                 transition={{
                   duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
+                  repeat: Infinity,
                   ease: "easeInOut",
                   delay: 1,
                 }}

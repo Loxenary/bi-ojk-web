@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
-import { Moon, Sun, Menu, X, Shield } from "lucide-react";
+import { Moon, Sun, Menu, X, Shield, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/navigation";
 
 const staggerContainer = {
   animate: { transition: { staggerChildren: 0.1 } },
@@ -19,10 +21,95 @@ const fadeInUp = {
 const whileHover = {
   scale: 1.05,
   y: -2,
-  color: "#3554E7",
+  color: "#3554E7", // Your accent color
 };
 
+// --- Language Switcher Component ---
+const LanguageSwitcher = () => {
+  const t = useTranslations("Header.LanguageSwitcher");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  const locales = [
+    { code: "en", name: t("english"), emoji: "🇬🇧" },
+    { code: "id", name: t("indonesian"), emoji: "🇮🇩" },
+    { code: "ms", name: t("malay"), emoji: "🇲🇾" },
+    { code: "vi", name: t("vietnamese"), emoji: "🇻🇳" },
+    { code: "th", name: t("thai"), emoji: "🇹🇭" },
+    { code: "tl", name: t("tagalog"), emoji: "🇵🇭" },
+  ];
+  const currentLocale = locales.find((l) => l.code === locale);
+
+  const handleLanguageChange = (nextLocale: string) => {
+    router.replace(pathname, { locale: nextLocale });
+    setIsOpen(false);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        wrapperRef.current &&
+        !wrapperRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [wrapperRef]);
+
+  return (
+    <div className="relative" ref={wrapperRef}>
+      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <Button
+          variant="ghost"
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors bg-secondary-background"
+        >
+          <span className="text-xl">{currentLocale?.emoji}</span>
+          <span className="text-sm font-medium uppercase text-primary-text">
+            {locale}
+          </span>
+        </Button>
+      </motion.div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.95 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute right-0 mt-2 w-32 origin-top-right rounded-md bg-secondary-background shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+          >
+            <div className="py-1">
+              {locales.map(({ code, name, emoji }) => (
+                <button
+                  key={code}
+                  onClick={() => handleLanguageChange(code)}
+                  className="flex flex-row text-left px-4 py-2 text-sm text-primary-text hover:bg-primary-border w-full"
+                >
+                  <span className="mr-2 text-lg">{emoji}</span>
+                  <span className="text-sm wrap-normal w-fit">{name}</span>
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+// --- Main Header Component ---
 export const Header = () => {
+  const t = useTranslations("Header");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
@@ -32,12 +119,18 @@ export const Header = () => {
     setMounted(true);
   }, []);
 
+  const navLinks = [
+    { key: "about", href: "#about" },
+    { key: "howItWorks", href: "#how-it-works" },
+    { key: "faq", href: "#faq" },
+  ];
+
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 z-40 transition-all duration-300 backdrop-blur-md border-b bg-primary-background opacity-95 border-primary-border w-screen overflow-hidden "
+      className="fixed top-0 z-40 transition-all duration-300 backdrop-blur-md border-b bg-primary-background/80 border-primary-border w-screen "
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -65,16 +158,16 @@ export const Header = () => {
                 initial="initial"
                 animate="animate"
               >
-                {["Tentang Kami", "Cara Kerja", "FAQ"].map((item) => (
+                {navLinks.map((link) => (
                   <motion.a
-                    key={item}
-                    href={`#${item.toLowerCase().replace(" ", "-")}`}
+                    key={link.key}
+                    href={link.href}
                     className="px-3 py-2 text-sm font-medium transition-colors duration-200 text-secondary-text"
                     variants={fadeInUp}
                     whileHover={whileHover}
                     whileTap={{ scale: 0.95 }}
                   >
-                    {item}
+                    {t(`nav.${link.key}`)}
                   </motion.a>
                 ))}
               </motion.div>
@@ -82,7 +175,7 @@ export const Header = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            {/* Dark Mode Toggle */}
+            <LanguageSwitcher />
             {mounted && (
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -91,34 +184,28 @@ export const Header = () => {
                 <Button
                   variant="ghost"
                   onClick={() => setTheme(isDark ? "light" : "dark")}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors"
-                  style={{
-                    backgroundColor: isDark ? "#262626" : "#F5F9FF",
-                  }}
+                  className="flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors bg-secondary-background"
                 >
                   <motion.div
                     animate={{ rotate: isDark ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
                     {isDark ? (
-                      <div className="w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center">
-                        <Sun className="w-3 h-3 text-yellow-800" />
-                      </div>
+                      <Sun className="w-5 h-5 text-yellow-400" />
                     ) : (
-                      <div className="w-5 h-5 bg-gray-700 rounded-full flex items-center justify-center">
-                        <Moon className="w-3 h-3 text-gray-200" />
-                      </div>
+                      <Moon className="w-5 h-5 text-gray-700" />
                     )}
                   </motion.div>
-                  <span className="text-sm font-medium">
-                    {isDark ? "Light" : "Dark"}
+                  <span className="text-sm font-medium text-primary-text">
+                    {isDark ? t("themeToggle.light") : t("themeToggle.dark")}
                   </span>
                 </Button>
               </motion.div>
             )}
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <LanguageSwitcher />
             <Button
               variant="ghost"
               size="sm"
@@ -127,9 +214,9 @@ export const Header = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={mobileMenuOpen ? "close" : "menu"}
-                  initial={{ rotate: 0 }}
-                  animate={{ rotate: 0 }}
-                  exit={{ rotate: 90 }}
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
                   {mobileMenuOpen ? (
@@ -151,17 +238,17 @@ export const Header = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden overflow-hidden border-t border-primary-border"
+            className="md:hidden overflow-hidden border-t border-primary-border bg-primary-background/95"
           >
             <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-              {["Tentang Kami", "Cara Kerja", "FAQ"].map((item) => (
+              {navLinks.map((link) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  key={link.key}
+                  href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="block rounded-md px-3 py-2 text-base font-medium text-secondary-text hover:bg-secondary-background"
                 >
-                  {item}
+                  {t(`nav.${link.key}`)}
                 </a>
               ))}
             </div>

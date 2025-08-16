@@ -42,7 +42,7 @@ export default function AmanAjaWebsite() {
 
       <HeroSection />
 
-      <FeatureSection featureList={featureList} />
+      <FeatureSection  />
 
       <HowItWorksSection />
 

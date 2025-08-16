@@ -4,24 +4,29 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
-  
   MessageCircle,
   Sun,
   Moon,
+  Send,
+  Search,
+  TrendingUp,
+  Database,
+  Eye,
+  Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
 import UserConcent from "@/components/how-it-works/UserConcent";
 import { useTheme } from "next-themes";
-import { dataUsageItems, detailedSteps, phoneLinks } from "@/constant/content";
+import { phoneLinks } from "@/constant/content";
 import Image from "next/image";
 import { fadeInUp } from "@/constant/style.constant";
-
-
+import { useTranslations } from "next-intl"; // Import the hook
+import { Link } from "@/i18n/navigation";
 
 export default function HowItWorksPage() {
+  const t = useTranslations("HowItWorksPage"); // Initialize the hook
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
@@ -30,19 +35,47 @@ export default function HowItWorksPage() {
     setMounted(true);
   }, []);
 
+  // Build data from translations
+  const dataUsageItems = [
+    {
+      icon: Database,
+      title: t("security.items.0.title"),
+      description: t("security.items.0.description"),
+    },
+    {
+      icon: Eye,
+      title: t("security.items.1.title"),
+      description: t("security.items.1.description"),
+    },
+    {
+      icon: Clock,
+      title: t("security.items.2.title"),
+      description: t("security.items.2.description"),
+    },
+  ];
+
+  const detailedSteps = [
+    {
+      icon: Send,
+      image: "/step1.png",
+      ...t.raw("detailedSteps.steps.0"),
+    },
+    {
+      icon: Search,
+      image: "/step2.png",
+      ...t.raw("detailedSteps.steps.1"),
+    },
+    {
+      icon: TrendingUp,
+      image: "/step3.png",
+      ...t.raw("detailedSteps.steps.2"),
+    },
+  ];
+
   return (
-    <div
-      className="min-h-screen transition-colors duration-300 bg-primary-background text-primary-text"
-      // style={{
-      //   backgroundColor: theme.bg.primary,
-      //   color: theme.text.primary,
-      // }}
-    >
+    <div className="min-h-screen transition-colors duration-300 bg-primary-background text-primary-text">
       {/* Header */}
-      <header
-        className="py-8 px-4 sm:px-6 lg:px-8 border-b border-border"
-        // style={{ borderColor: theme.border }}
-      >
+      <header className="py-8 px-4 sm:px-6 lg:px-8 border-b border-border">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <motion.div
@@ -56,21 +89,14 @@ export default function HowItWorksPage() {
                   variant="ghost"
                   size="sm"
                   className="flex items-center space-x-2 text-secondary-text"
-                  // style={{ color: theme.text.secondary }}
                 >
                   <ArrowLeft className="w-4 h-4" />
-                  <span>Kembali</span>
+                  <span>{t("header.back")}</span>
                 </Button>
               </Link>
-              <div
-                className="h-6 w-px bg-border"
-                // style={{ backgroundColor: theme.border }}
-              />
-              <h1
-                className="text-2xl font-bold text-primary-text"
-                // style={{ color: theme.text.primary }}
-              >
-                Cara Kerja AmanAja
+              <div className="h-6 w-px bg-border" />
+              <h1 className="text-2xl font-bold text-primary-text">
+                {t("header.title")}
               </h1>
             </motion.div>
 
@@ -102,7 +128,7 @@ export default function HowItWorksPage() {
                     )}
                   </motion.div>
                   <span className="text-sm font-medium">
-                    {isDark ? "Light" : "Dark"}
+                    {isDark ? t("header.lightMode") : t("header.darkMode")}
                   </span>
                 </Button>
               </motion.div>
@@ -112,44 +138,31 @@ export default function HowItWorksPage() {
       </header>
 
       {/* Hero Section */}
-      <section
-        className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-background"
-        // style={{ backgroundColor: theme.bg.secondary }}
-      >
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-background">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             className="text-4xl sm:text-5xl font-bold mb-6 text-primary-text"
-            // style={{ color: theme.text.primary }}
             variants={fadeInUp}
           >
-            Teknologi AI yang
-            <span
-              className="text-accent-background"
-              // style={{ color: theme.bg.accent }}
-            >
-              {" "}
-              Mudah Digunakan
-            </span>
+            {t.rich("hero.title", {
+              accent: (chunks) => (
+                <span className="text-accent-background">{chunks}</span>
+              ),
+            })}
           </motion.h2>
           <motion.p
             className="text-xl leading-relaxed text-secondary-text"
-            // style={{ color: theme.text.secondary }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Pelajari bagaimana AmanAja menggunakan kecerdasan buatan terdepan
-            untuk melindungi Anda dari penipuan digital dengan proses yang
-            sederhana dan cepat.
+            {t("hero.subtitle")}
           </motion.p>
         </div>
       </section>
 
       {/* Detailed Steps */}
-      <section
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background"
-        // style={{ backgroundColor: theme.bg.primary }}
-      >
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-background">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -157,18 +170,11 @@ export default function HowItWorksPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3
-              className="text-3xl font-bold mb-4 text-primary-text"
-              // style={{ color: theme.text.primary }}
-            >
-              Proses Detail Analisis AI
+            <h3 className="text-3xl font-bold mb-4 text-primary-text">
+              {t("detailedSteps.title")}
             </h3>
-            <p
-              className="text-lg text-secondary-text"
-              // style={{ color: theme.text.secondary }}
-            >
-              Setiap langkah dirancang untuk memberikan hasil yang akurat dan
-              dapat diandalkan
+            <p className="text-lg text-secondary-text">
+              {t("detailedSteps.subtitle")}
             </p>
           </motion.div>
 
@@ -186,63 +192,33 @@ export default function HowItWorksPage() {
                 >
                   <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                     <div className="flex items-center mb-6">
-                      <div
-                        className="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 bg-accent-background"
-                        // style={{ backgroundColor: theme.bg.accent }}
-                      >
-                        <IconComponent
-                          className="w-8 h-8 text-inverse-text"
-                          // style={{ color: theme.text.inverse }}
-                        />
+                      <div className="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 bg-accent-background">
+                        <IconComponent className="w-8 h-8 text-inverse-text" />
                       </div>
                       <div>
-                        <Badge
-                          className="mb-2 bg-orange-background/20 text-orange-background"
-                          // style={{
-                          //   backgroundColor: theme.bg.orange + "20",
-                          //   color: theme.bg.orange,
-                          // }}
-                        >
-                          Langkah {step.step}
+                        <Badge className="mb-2 bg-orange-background/20 text-orange-background">
+                          {t("detailedSteps.stepLabel")} {step.step}
                         </Badge>
-                        <h4
-                          className="text-2xl font-bold text-primary-text"
-                          // style={{ color: theme.text.primary }}
-                        >
+                        <h4 className="text-2xl font-bold text-primary-text">
                           {step.title}
                         </h4>
-                        <p
-                          className="text-sm text-accent-background"
-                          // style={{ color: theme.bg.accent }}
-                        >
+                        <p className="text-sm text-accent-background">
                           {step.subtitle}
                         </p>
                       </div>
                     </div>
 
-                    <p
-                      className="text-lg leading-relaxed mb-6 text-secondary-text"
-                      // style={{ color: theme.text.secondary }}
-                    >
+                    <p className="text-lg leading-relaxed mb-6 text-secondary-text">
                       {step.description}
                     </p>
 
                     <div className="space-y-3">
-                      {step.process.map((process, idx) => (
+                      {(step.process as string[]).map((process, idx) => (
                         <div key={idx} className="flex items-start space-x-3">
-                          <div
-                            className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5 bg-accent-background/20 text-accent-background"
-                            // style={{
-                            //   backgroundColor: theme.bg.accent + "20",
-                            //   color: theme.bg.accent,
-                            // }}
-                          >
+                          <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5 bg-accent-background/20 text-accent-background">
                             {idx + 1}
                           </div>
-                          <span
-                            className="text-sm text-secondary-text"
-                            // style={{ color: theme.text.secondary }}
-                          >
+                          <span className="text-sm text-secondary-text">
                             {process}
                           </span>
                         </div>
@@ -251,17 +227,11 @@ export default function HowItWorksPage() {
                   </div>
 
                   <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                    <Card
-                      className="p-2 bg-secondary-background border border-border"
-                      // style={{
-                      //   backgroundColor: theme.bg.secondary,
-                      //   borderColor: theme.border,
-                      // }}
-                    >
+                    <Card className="p-2 bg-secondary-background border border-border">
                       <CardContent>
                         <Image
                           src={`/images${step.image}`}
-                          alt={"Step 1"}
+                          alt={`Step ${step.step}`}
                           width={1920}
                           height={1080}
                         />
@@ -276,10 +246,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Security Measures */}
-      <section
-        className="pt-20 px-4 sm:px-6 lg:px-8 bg-primary-background"
-        // style={{ backgroundColor: theme.bg.primary }}
-      >
+      <section className="pt-20 px-4 sm:px-6 lg:px-8 bg-primary-background">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -287,17 +254,11 @@ export default function HowItWorksPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3
-              className="text-3xl font-bold mb-4 text-primary-text"
-              // style={{ color: theme.text.primary }}
-            >
-              Keamanan & Privasi Terjamin
+            <h3 className="text-3xl font-bold mb-4 text-primary-text">
+              {t("security.title")}
             </h3>
-            <p
-              className="text-lg text-secondary-text"
-              //  style={{ color: theme.text.secondary }}
-            >
-              Standar keamanan enterprise untuk melindungi data dan privasi Anda
+            <p className="text-lg text-secondary-text">
+              {t("security.subtitle")}
             </p>
           </motion.div>
         </div>
@@ -306,30 +267,24 @@ export default function HowItWorksPage() {
       <UserConcent dataUsageItems={dataUsageItems} />
 
       {/* CTA Section */}
-      <section
-        className="py-16 px-4 sm:px-6 mt-20 lg:px-8 bg-secondary-background"
-        // style={{ backgroundColor: theme.bg.secondary }}
-      >
+      <section className="py-16 px-4 sm:px-6 mt-20 lg:px-8 bg-secondary-background">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h3
             className="text-3xl font-bold mb-6 text-primary-text"
-            // style={{ color: theme.text.primary }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Siap Mencoba Teknologi AI Ini?
+            {t("cta.title")}
           </motion.h3>
           <motion.p
             className="text-lg mb-8 text-secondary-text"
-            // style={{ color: theme.text.secondary }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Rasakan sendiri kecepatan dan akurasi sistem AI AmanAja dalam
-            melindungi Anda
+            {t("cta.subtitle")}
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -342,13 +297,9 @@ export default function HowItWorksPage() {
               <Button
                 size="lg"
                 className="px-8 py-3 bg-accent-background text-inverse-text"
-                // style={{
-                //   backgroundColor: theme.bg.accent,
-                //   color: theme.text.inverse,
-                // }}
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Coba Sekarang
+                {t("cta.button_try")}
               </Button>
             </Link>
             <Link href="/">
@@ -356,12 +307,8 @@ export default function HowItWorksPage() {
                 size="lg"
                 variant="outline"
                 className="px-8 py-3 bg-transparent border-border border text-secondary-text"
-                // style={{
-                //   borderColor: theme.border,
-                //   color: theme.text.secondary,
-                // }}
               >
-                Kembali ke Beranda
+                {t("cta.button_home")}
               </Button>
             </Link>
           </motion.div>

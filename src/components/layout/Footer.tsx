@@ -5,10 +5,13 @@ import { Shield, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { fadeInUp, staggerContainer } from "@/constant/style.constant";
-import Link from "next/link";
 import { phoneLinks } from "@/constant/content";
+import { useTranslations } from "next-intl"; 
+import { Link } from "@/i18n/navigation";
 
 export const Footer = () => {
+  const t = useTranslations("Footer"); 
+
   return (
     <footer className="py-20 px-4 sm:px-6 lg:px-8 text-primary-text bg-inverse-text">
       <div className="max-w-7xl mx-auto">
@@ -33,14 +36,12 @@ export const Footer = () => {
                   AmanAja
                 </div>
                 <div className="text-sm text-gray-400">
-                  AI Fraud Detection Platform
+                  {t("tagline")}
                 </div>
               </div>
             </div>
             <p className="text-gray-400 mb-8 max-w-md leading-relaxed">
-              Melindungi masyarakat Indonesia dari penipuan digital dengan
-              teknologi AI terdepan. Bersama-sama kita ciptakan internet yang
-              lebih aman.
+              {t("description")}
             </p>
             <motion.div
               className="w-fit"
@@ -51,7 +52,7 @@ export const Footer = () => {
               <Link href={phoneLinks} target="_blank">
                 <Button className="transition-all duration-200 bg-accent-background hover:bg-accent-background/90 text-inverse-text dark:hover:text-white">
                   <MessageCircle className="w-4 h-4 mr-2" />
-                  Mulai Chat
+                  {t("cta_chat")}
                 </Button>
               </Link>
             </motion.div>
@@ -68,7 +69,7 @@ export const Footer = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-gray-400">
-            &copy; 2025 AmanAja. All rights reserved.
+            {t("copyright")}
           </p>
         </motion.div>
       </div>

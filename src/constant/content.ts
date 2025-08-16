@@ -93,3 +93,4 @@ export const detailedSteps = [
     image: "/step3.png",
   },
 ];
+

@@ -1,0 +1,281 @@
+{
+  "Header": {
+    "nav": {
+      "about": "About Us",
+      "howItWorks": "How It Works",
+      "faq": "FAQ"
+    },
+    "themeToggle": {
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "LanguageSwitcher": {
+      "indonesian": "Indonesian",
+      "english": "English",
+      "malay": "Malay",
+      "vietnamese": "Vietnamese",
+      "thai": "Thai",
+      "tagalog": "Tagalog"
+    }
+  },
+  "HeroSection": {
+    "title": "Protect Yourself from <accent>Digital Scams</accent> with AI",
+    "subtitle": "AmanAja uses artificial intelligence to detect and prevent digital fraud in real-time. Easy to use, accurate, and reliable.",
+    "cta_whatsapp": "Chat on WhatsApp",
+    "cta_demo": "Watch Demo"
+  },
+  "FeatureSection": {
+    "title": "Why Choose <accent>AmanAja</accent>?",
+    "subtitle": "Excellent features that make AmanAja the best choice for your digital protection.",
+    "cta_about": "About Us",
+    "features": [
+      {
+        "title": "Message Storage",
+        "description": "Your WhatsApp messages are temporarily stored for AI analysis and will be automatically deleted after the analysis is complete."
+      },
+      {
+        "title": "Limited Access",
+        "description": "Access to the database cannot be performed by developers or administrators."
+      },
+      {
+        "title": "Data Usage",
+        "description": "Data is not used for purposes other than context and sentiment analysis."
+      }
+    ]
+  },
+  "HowItWorksSection": {
+    "title": "How <accent>AmanAja</accent> Works",
+    "subtitle": "AmanAja works in 3 simple steps: Send suspicious messages to our WhatsApp, our AI will analyze the content and fraud patterns, then you receive the analysis results with recommended actions in seconds.",
+    "steps": [
+      {
+        "title": "Send Message",
+        "description": "Forward suspicious messages to AmanAja's WhatsApp or send a screenshot."
+      },
+      {
+        "title": "AI Analysis",
+        "description": "The AI system analyzes the content and compares it with the fraud database."
+      },
+      {
+        "title": "Receive Results",
+        "description": "Get analysis results with risk levels and recommended actions."
+      }
+    ],
+    "cta_learnMore": "Learn More",
+    "video_title": "Watch the AmanAja Demo",
+    "video_description": "See how AmanAja detects and prevents various types of digital fraud in real-time."
+  },
+  "CTASection": {
+    "title": "Ready to Protect Yourself?",
+    "subtitle": "Join thousands of users who are already experiencing the layered security of AmanAja. Start protecting yourself today!",
+    "cta_chat": "Start Chat Now",
+    "cta_demo": "Watch Demo"
+  },
+  "FAQSection": {
+    "title": "Frequently Asked <accent>Questions</accent>",
+    "subtitle": "Answers to frequently asked questions about AmanAja",
+    "questions": [
+      {
+        "question": "Is AmanAja free?",
+        "answer": "Yes, AmanAja is currently accessible to everyone and is free of charge."
+      },
+      {
+        "question": "How does AmanAja's AI work?",
+        "answer": "AmanAja uses AI with Gemini, fine-tuned for fraud detection needs."
+      },
+      {
+        "question": "Is my data secure?",
+        "answer": "Secure. We do not store your personal data. Previously used data is only stored as a small context for the next detection."
+      },
+      {
+        "question": "How long does the analysis take?",
+        "answer": "The analysis can be completed in an average of 1 minute."
+      },
+      {
+        "question": "Can AmanAja detect all types of fraud?",
+        "answer": "AmanAja can detect various types of digital fraud including phishing, prize scams, investment fraud, and so on."
+      }
+    ]
+  },
+  "Footer": {
+    "tagline": "AI Fraud Detection Platform",
+    "description": "Protecting the people of Indonesia from digital fraud with leading AI technology. Together, we create a safer internet.",
+    "cta_chat": "Start Chat",
+    "copyright": "© 2025 AmanAja. All rights reserved."
+  },
+  "AboutPage": {
+    "header": {
+      "back": "Back",
+      "title": "About AmanAja",
+      "badge": "Est. 2022"
+    },
+    "hero": {
+      "title": "Protecting Indonesia from <accent>Digital Fraud</accent>",
+      "subtitle": "AmanAja was born from a deep concern about the rise of digital fraud cases in Indonesia. We believe AI technology can be the frontline in protecting the public from the threat of cybercrime.",
+      "stats": {
+        "users": "Protected Users",
+        "scams": "Blocked Scams",
+        "accuracy": "AI Accuracy",
+        "monitoring": "Monitoring"
+      }
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To create an AI technology that can be used by the general public so that with this AI, we hope that people, both those who are tech-savvy and those who are not, can avoid all cases of fraud that occur in the digital world.",
+      "points": [
+        "Reduce the success rate of fraud through the platform by at least 30%",
+        "Process reports on a large scale, at least 15,000 reports per month",
+        "Identify new illegal entities through their phone and account numbers",
+        "Provide easy access to verify bank accounts or phone numbers"
+      ]
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The principles that guide our every decision and action",
+      "items": {
+        "security": {
+          "title": "Security First",
+          "description": "We place user security and privacy as our top priority."
+        },
+        "socialImpact": {
+          "title": "Social Impact",
+          "description": "We are committed to creating a safe internet for everyone, especially vulnerable groups like the elderly."
+        },
+        "innovation": {
+          "title": "Continuous Innovation",
+          "description": "Constantly innovating with technology to face the evolution of cyber threats."
+        },
+        "community": {
+          "title": "Community First",
+          "description": "Building solutions with the community by listening to user feedback and needs."
+        }
+      }
+    },
+    "team": {
+      "title": "Our Expert Team",
+      "subtitle": "Led by experienced experts from the world's leading technology companies.",
+      "expertise": "Expertise",
+      "education": "Education",
+      "achievements": "Key Achievements",
+      "members": [
+        {
+          "name": "Rizqi Andhika",
+          "role": "Hustler",
+          "expertise": "Business Expert",
+          "education": "Bandung Institute of Technology",
+          "description": "A proficient business analyst and hustler.",
+          "achievements": ["Owner of a game merchandise company", "GPA 4.0"]
+        },
+        {
+          "name": "Muhammad Akmal Ramadhan",
+          "role": "Hacker",
+          "expertise": "AI and ML Expert",
+          "education": "Bandung Institute of Technology",
+          "description": "A Machine Learning and AI practitioner who has won several championships.",
+          "achievements": ["Winner of Data Science Competition", "Best Project on Japan Trip"]
+        },
+        {
+          "name": "Valentino Chryslie Triadi",
+          "role": "Hacker",
+          "expertise": "DevOps and Data Expert",
+          "education": "Bandung Institute of Technology",
+          "description": "A Software Engineer who is an expert in the field of DevOps and systems.",
+          "achievements": ["Head of the IT committee for an event at ITB", "GPA 4.0"]
+        },
+        {
+          "name": "Muhammad Davis Adhipramana",
+          "role": "Hipster",
+          "expertise": "Frontend Developer",
+          "education": "Bandung Institute of Technology",
+          "description": "A Game Developer and Software Engineer with a focus on visuals.",
+          "achievements": ["Winner of Business Hackathon", "Runner-up of GameDev Competition"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Join Our Mission",
+      "subtitle": "Let's work together to create a safer internet for everyone.",
+      "button_protect": "Start Protecting Yourself",
+      "button_home": "Back to Home"
+    }
+  },
+  "HowItWorksPage": {
+    "header": {
+      "back": "Back",
+      "title": "How AmanAja Works",
+      "lightMode": "Light",
+      "darkMode": "Dark"
+    },
+    "hero": {
+      "title": "AI Technology That's <accent>Easy to Use</accent>",
+      "subtitle": "Learn how AmanAja uses leading artificial intelligence to protect you from digital fraud with a simple and fast process."
+    },
+    "detailedSteps": {
+      "title": "Detailed AI Analysis Process",
+      "subtitle": "Each step is designed to provide accurate and reliable results.",
+      "stepLabel": "Step",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Send Message",
+          "subtitle": "Input & Data Collection",
+          "description": "Forward suspicious messages to AmanAja's WhatsApp number or take a screenshot and send the image.",
+          "process": [
+            "User sends a message to AmanAja's WhatsApp",
+            "The system receives and validates the input",
+            "Data is converted into Vector format",
+            "Data processed via OCR is stored in respective QDrant instances"
+          ]
+        },
+        {
+          "step": "2",
+          "title": "AI Analysis",
+          "subtitle": "Machine Learning Processing",
+          "description": "The AI system analyzes the content, patterns, and compares it with the latest fraud database.",
+          "process": [
+            "Text preprocessing and tokenization",
+            "Feature extraction from the content",
+            "Using a fine-tuned Gemini Model for results",
+            "Sentiment Analysis",
+            "Storing in RAG as a token"
+          ]
+        },
+        {
+          "step": "3",
+          "title": "Receive Results",
+          "subtitle": "Result & Recommendation",
+          "description": "Get a complete analysis result with a risk level and recommended actions in seconds.",
+          "process": [
+            "Results are sent to the user",
+            "The user will be provided with a confidence level",
+            "The user will also be given a summary",
+            "Restarting the input process from the beginning"
+          ]
+        }
+      ]
+    },
+    "security": {
+      "title": "Guaranteed Security & Privacy",
+      "subtitle": "Enterprise security standards to protect your data and privacy.",
+      "items": [
+        {
+          "title": "Message Storage",
+          "description": "Your WhatsApp messages are temporarily stored for AI analysis and will be automatically deleted after the analysis is complete."
+        },
+        {
+          "title": "Limited Access",
+          "description": "Access to the database cannot be performed by developers or administrators."
+        },
+        {
+          "title": "Data Usage",
+          "description": "Data is not used for purposes other than context and sentiment analysis."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Try This AI Technology?",
+      "subtitle": "Experience the speed and accuracy of AmanAja's AI system in protecting you firsthand.",
+      "button_try": "Try Now",
+      "button_home": "Back to Home"
+    }
+  }
+}

@@ -1,25 +1,42 @@
+"use client";
+
 import { staggerContainer } from "@/constant/style.constant";
 import { motion, useInView } from "framer-motion";
-
 import { useRef } from "react";
-
 import { FeatureCard } from "./FeatureCard";
-import { FeatureItemInterface } from "@/constant/type";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Database, Eye, Clock } from "lucide-react"; // Import icons
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { section } from "framer-motion/client";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-interface FeatureSectionProps {
-  featureList: FeatureItemInterface[];
-}
-
-export const FeatureSection = ({ featureList }: FeatureSectionProps) => {
+// This component no longer needs props
+export const FeatureSection = () => {
+  const t = useTranslations("FeatureSection");
   const featuresRef = useRef(null);
   const featuresInView = useInView(featuresRef, {
     once: true,
     margin: "-100px",
   });
+
+  // Build the feature list inside the component using translations
+  const featureList = [
+    {
+      icon: Database,
+      title: t("features.0.title"),
+      description: t("features.0.description"),
+    },
+    {
+      icon: Eye,
+      title: t("features.1.title"),
+      description: t("features.1.description"),
+    },
+    {
+      icon: Clock,
+      title: t("features.2.title"),
+      description: t("features.2.description"),
+    },
+  ];
+
   return (
     <section
       ref={featuresRef}
@@ -36,12 +53,14 @@ export const FeatureSection = ({ featureList }: FeatureSectionProps) => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl font-bold mb-6 text-primary-text">
-            Kenapa Harus <span className="text-accent-background">AmanAja</span>
-            ?
+            {t.rich("title", {
+              accent: (chunks) => (
+                <span className="text-accent-background">{chunks}</span>
+              ),
+            })}
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-secondary-text">
-            Fitur-fitur unggulan yang membuat AmanAja menjadi pilihan terbaik
-            untuk perlindungan digital Anda
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -53,9 +72,9 @@ export const FeatureSection = ({ featureList }: FeatureSectionProps) => {
         >
           {featureList.map((feature, index) => (
             <FeatureCard
-              title={feature.title}
               key={index}
               index={index}
+              title={feature.title}
               description={feature.description}
               icon={feature.icon}
             />
@@ -77,7 +96,7 @@ export const FeatureSection = ({ featureList }: FeatureSectionProps) => {
                 variant="outline"
                 className="px-8 py-4 text-lg transition-all duration-200 bg-transparent hover:bg-accent-background/10 border border-accent-background text-accent-background"
               >
-                Tentang Kami
+                {t("cta_about")}
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
