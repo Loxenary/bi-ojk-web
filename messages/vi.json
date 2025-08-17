@@ -24,22 +24,22 @@
     "cta_whatsapp": "Trò chuyện trên WhatsApp",
     "cta_demo": "Xem Demo"
   },
-  "FeatureSection": {
+    "FeatureSection": {
     "title": "Tại sao chọn <accent>AmanAja</accent>?",
     "subtitle": "Các tính năng tuyệt vời giúp AmanAja trở thành lựa chọn tốt nhất để bảo vệ kỹ thuật số của bạn.",
     "cta_about": "Về Chúng Tôi",
     "features": [
       {
-        "title": "Lưu trữ Tin nhắn",
-        "description": "Tin nhắn WhatsApp của bạn được lưu trữ tạm thời để phân tích AI và sẽ tự động bị xóa sau khi phân tích hoàn tất."
+        "title": "Phân tích Trò chuyện",
+        "description": "Chuyển tiếp tin nhắn của bạn và đợi kết quả."
       },
       {
-        "title": "Truy cập Hạn chế",
-        "description": "Các nhà phát triển hoặc quản trị viên không thể truy cập vào cơ sở dữ liệu."
+        "title": "Trình kiểm tra Số điện thoại",
+        "description": "Kiểm tra xem một số có bị coi là lừa đảo hay không."
       },
       {
-        "title": "Sử dụng Dữ liệu",
-        "description": "Dữ liệu không được sử dụng cho các mục đích khác ngoài phân tích bối cảnh và tình cảm."
+        "title": "Trình kiểm tra Tài khoản Ngân hàng",
+        "description": "Kiểm tra xem một tài khoản ngân hàng có bị coi là lừa đảo hay không."
       }
     ]
   },

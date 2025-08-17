@@ -30,16 +30,16 @@
     "cta_about": "Tungkol sa Amin",
     "features": [
       {
-        "title": "Imbakan ng Mensahe",
-        "description": "Ang iyong mga mensahe sa WhatsApp ay pansamantalang iniimbak para sa pagsusuri ng AI at awtomatikong tatanggalin pagkatapos makumpleto ang pagsusuri."
+        "title": "Pagsusuri ng Chat",
+        "description": "Ipasa ang iyong mensahe at hintayin ang resulta."
       },
       {
-        "title": "Limitadong Pag-access",
-        "description": "Ang pag-access sa database ay hindi maaaring isagawa ng mga developer o administrator."
+        "title": "Checker ng Numero ng Telepono",
+        "description": "Suriin kung ang isang numero ay itinuturing na pandaraya."
       },
       {
-        "title": "Paggamit ng Datos",
-        "description": "Ang datos ay hindi ginagamit para sa mga layunin maliban sa konteksto at pagsusuri ng sentimyento."
+        "title": "Checker ng Bank Account",
+        "description": "Suriin kung ang isang bank account ay itinuturing na pandaraya."
       }
     ]
   },

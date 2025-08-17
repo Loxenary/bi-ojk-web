@@ -24,22 +24,22 @@
     "cta_whatsapp": "Sembang di WhatsApp",
     "cta_demo": "Tonton Demo"
   },
-  "FeatureSection": {
+   "FeatureSection": {
     "title": "Mengapa Pilih <accent>AmanAja</accent>?",
     "subtitle": "Ciri-ciri cemerlang yang menjadikan AmanAja pilihan terbaik untuk perlindungan digital anda.",
     "cta_about": "Tentang Kami",
     "features": [
       {
-        "title": "Penyimpanan Mesej",
-        "description": "Mesej WhatsApp anda disimpan sementara untuk analisis AI dan akan dipadamkan secara automatik selepas analisis selesai."
+        "title": "Analisis Sembang",
+        "description": "Hantarkan mesej anda dan tunggu hasilnya."
       },
       {
-        "title": "Akses Terhad",
-        "description": "Akses kepada pangkalan data tidak boleh dilakukan oleh pembangun atau pentadbir."
+        "title": "Penyemak Nombor Telefon",
+        "description": "Semak sama ada nombor dianggap penipuan."
       },
       {
-        "title": "Penggunaan Data",
-        "description": "Data tidak digunakan untuk tujuan selain daripada konteks dan analisis sentimen."
+        "title": "Penyemak Akaun Bank",
+        "description": "Semak sama ada akaun bank dianggap penipuan."
       }
     ]
   },

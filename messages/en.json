@@ -30,16 +30,16 @@
     "cta_about": "About Us",
     "features": [
       {
-        "title": "Message Storage",
-        "description": "Your WhatsApp messages are temporarily stored for AI analysis and will be automatically deleted after the analysis is complete."
+        "title": "Chat Analysis",
+        "description": "Forward your message and wait for the result."
       },
       {
-        "title": "Limited Access",
-        "description": "Access to the database cannot be performed by developers or administrators."
+        "title": "Phone Number Checker",
+        "description": "Check whether a number is considered fraudulent."
       },
       {
-        "title": "Data Usage",
-        "description": "Data is not used for purposes other than context and sentiment analysis."
+        "title": "Bank Account Checker",
+        "description": "Check whether a bank account is considered fraudulent."
       }
     ]
   },

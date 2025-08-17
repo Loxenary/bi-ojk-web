@@ -51,22 +51,22 @@
     "cta_chat": "Mulai Chat Sekarang",
     "cta_demo": "Lihat Demo"
   },
-  "FeatureSection": {
+    "FeatureSection": {
     "title": "Kenapa Harus <accent>AmanAja</accent>?",
     "subtitle": "Fitur-fitur unggulan yang membuat AmanAja menjadi pilihan terbaik untuk perlindungan digital Anda.",
     "cta_about": "Tentang Kami",
     "features": [
       {
-        "title": "Penyimpanan Pesan",
-        "description": "Pesan WhatsApp Anda disimpan sementara untuk proses analisis AI dan akan dihapus otomatis setelah analisis selesai."
+        "title": "Analisis Chat",
+        "description": "Teruskan pesan Anda dan tunggu hasilnya."
       },
       {
-        "title": "Akses Terbatas",
-        "description": "Akses terhadap database tidak dapat dilakukan oleh developer maupun administrasi."
+        "title": "Pengecek Nomor Telepon",
+        "description": "Periksa apakah sebuah nomor dianggap penipuan."
       },
       {
-        "title": "Penggunaan Data",
-        "description": "Data tidak digunakan selain keperluan context dan sentiment analysis."
+        "title": "Pengecek Rekening Bank",
+        "description": "Periksa apakah sebuah rekening bank dianggap penipuan."
       }
     ]
   },

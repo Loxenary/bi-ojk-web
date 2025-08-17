@@ -4,7 +4,7 @@ import { staggerContainer } from "@/constant/style.constant";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { FeatureCard } from "./FeatureCard";
-import { ChevronRight, Database, Eye, Clock } from "lucide-react"; // Import icons
+import { ChevronRight, MessageSquareText, Smartphone, Landmark } from "lucide-react"; // Import icons
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -19,24 +19,23 @@ export const FeatureSection = () => {
   });
 
   // Build the feature list inside the component using translations
-  const featureList = [
+    const featureList = [
     {
-      icon: Database,
+      icon: MessageSquareText,
       title: t("features.0.title"),
       description: t("features.0.description"),
     },
     {
-      icon: Eye,
+      icon: Smartphone,
       title: t("features.1.title"),
       description: t("features.1.description"),
     },
     {
-      icon: Clock,
+      icon: Landmark,
       title: t("features.2.title"),
       description: t("features.2.description"),
     },
   ];
-
   return (
     <section
       ref={featuresRef}
